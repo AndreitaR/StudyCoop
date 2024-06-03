@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyCoop - Bloqueo de publicaci&oacute;n</title>
+  </head>
+  <body bgcolor="#FFF8DC">
+    <header>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+            </td>
+            <td>
+              <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
+            </td>
+            <td>
+              <form action="/extranet/resultadoBuscar.html" method="get">
+                <input
+                  type="text"
+                  name="buscar"
+                  placeholder="Buscar..."
+                  required
+                />
+                <button type="submit">Buscar</button>
+              </form>
+            </td>
+
+            <td colspan="2">
+              <nav>
+                <img
+                  src="/imagenes/notificaciones.png"
+                  alt="acti.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> Notificaciones </a>
+                <img
+                  src="/imagenes/tarea.png"
+                  alt="noti.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> Tareas </a>
+                <img
+                  src="/imagenes/usuario.png"
+                  alt="usuario.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> ADMINISTRADOR </a>
+              </nav>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </header>
+
+    <nav>
+      <a href="/intranet/novedadesAdmin.html"> Subir novedades </a> <br />
+      <a href="/intranet/gestionarUsuarios.html"> Gestionar usuario </a> <br />
+    </nav>
+
+    <div>
+      <center>
+        <form action="bloquearPublicacion">
+          <table align="1" cellpadding="10">
+            <tr>
+              <td align="left">
+                <p>Bloqueo de publicaci&oacute;n</p>
+                <table>
+                  <tr>
+                    <td><p>De:</p></td>
+                    <td><input type="email" name="de" required /></td>
+                  </tr>
+                  <tr>
+                    <td><p>Para:</p></td>
+                    <td><input type="email" name="para" required /></td>
+                  </tr>
+                  <tr>
+                    <td><p>Prueba:</p></td>
+                  </tr>
+                </table>
+                <table border="1" cellpadding="10">
+                  <tr>
+                    <td colspan="2" align="left">
+                      <p>Francesco Paz</p>
+                    </td>
+                    <td align="right">
+                      <p>01/09/24</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" align="center">
+                      <p>xd</p>
+                      <p>Que onda son todos unos #$%&</p>
+                    </td>
+                  </tr>
+                </table>
+                <center>
+                  <nav>
+                    <a href=""> reaccionar </a>
+                    <a href=""> comentar </a>
+                    <a href=""> compartir </a>
+                    <a href=""> descargar </a>
+                    <a href=""> guardar </a>
+                  </nav>
+                  <br />
+                </center>
+                <br />
+                <textarea rows="10" cols="40" id="comentario" name="comentario" placeholder="Informaci&oacute;n sobre el bloqueo de la publicacion: "></textarea>
+                <button type="submit">Enviar</button>
+                <br />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </center>
+    </div>
+
+    <footer>
+      <hr />
+      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
+          <li>
+            <a href="">StudyCoop@gmail.com</a>
+          </li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

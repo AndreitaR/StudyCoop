@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyCoop - Configuraci&oacute;n de perfil</title>
+  </head>
+
+  <body bgcolor="#FFF8DC">
+    <header>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+            </td>
+            <td>
+              <a href="/extranet/muro.html">
+                <h1>StudyCoop</h1>
+              </a>
+            </td>
+            <td>
+              <form action="/extranet/resultadoBuscar.html" method="get">
+                <input
+                  type="text"
+                  name="buscar"
+                  placeholder="Buscar..."
+                  required
+                />
+                <button type="submit">Buscar</button>
+              </form>
+            </td>
+            <td colspan="2"></td>
+            <td>
+              <img
+                src="/imagenes/usuario.png"
+                alt="Foto de perfil"
+                width="30px"
+                height="30px"
+              />
+            </td>
+            <td>
+              <h2>Flores del Campo</h2>
+              <b> Informatica </b>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </header>
+
+    <center>
+      <form action="/extranet/configurarPerfil.html" method="post">
+        <table border="1" cellpadding="10">
+          <tr>
+            <td>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" /><br /><br />
+
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" /><br /><br />
+
+              <label for="Carrera">Carrera:</label>
+              <input type="text" id="Carrera" name="Carrera" /><br /><br />
+
+              <label for="Edad">Edad</label>
+              <input
+                type="number"
+                min="17"
+                max="99"
+                id="Edad"
+                name="Edad"
+              /><br /><br />
+
+              <label for="Pais">Pa&iacute;s:</label>
+              <input type="text" id="Pais" name="Pais" /><br /><br />
+
+              <label for="Universidad">Universidad:</label>
+              <input
+                type="text"
+                id="Universidad"
+                name="Universidad"
+              /><br /><br />
+
+              <label for="Apodo">Apodo:</label>
+              <input type="text" id="Apodo" name="Apodo" /><br /><br />
+
+              <label for="Provincia">Provincia</label>
+              <input type="text" id="Provincia" name="Provincia" /><br /><br />
+
+              <label for="Contraseña">contrase&ntilde;a</label>
+              <input
+                type="password"
+                id="Contraseña"
+                name="Contraseña"
+              /><br /><br />
+
+              <label for="Foto de Perfil">Foto de Perfil:</label>
+              <input
+                type="file"
+                id="FotoPerfil"
+                name="FotoPerfil"
+              /><br /><br />
+
+              <label for="email">Correo electr&oacute;nico:</label>
+              <input type="email" id="email" name="email" /><br /><br />
+            </td>
+          </tr>
+        </table>
+        <button type="submit">Guardar</button>
+      </form>
+      <form action="/extranet/perfilUsuario.html" method="get">
+        <button type="submit">Cancelar</button>
+      </form>
+    </center>
+    <footer>
+      <hr />
+      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
+          <li>
+            <a href="">StudyCoop@gmail.com</a>
+          </li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

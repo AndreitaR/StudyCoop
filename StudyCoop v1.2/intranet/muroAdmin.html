@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyCoop - Principal</title>
+  </head>
+
+  <body bgcolor="#FFF8DC">
+    <header>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+            </td>
+            <td>
+              <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
+            </td>
+            <td>
+              <form action="/extranet/resultadoBuscar.html" method="get">
+                <input
+                  type="text"
+                  name="buscar"
+                  placeholder="Buscar..."
+                  required
+                />
+                <button type="submit">Buscar</button>
+              </form>
+            </td>
+
+            <td colspan="2">
+              <nav>
+                <img
+                  src="/imagenes/notificaciones.png"
+                  alt="acti.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> Notificaciones </a>
+                <img
+                  src="/imagenes/tarea.png"
+                  alt="noti.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> Tareas </a>
+                <img
+                  src="/imagenes/usuario.png"
+                  alt="usuario.png"
+                  height="30px"
+                  width="30px"
+                />
+                <a href=""> ADMINISTRADOR </a>
+              </nav>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </header>
+    <nav>
+      <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
+      <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
+    </nav>
+    <table align="center">
+      <tr>
+        <td>
+          <h1>Desarrollo de Software</h1>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <form action="/crearPublicacion.php">
+            <table>
+              <td>
+                <label for="publicacion"><b>Nueva Publicaci&oacute;n:</b></label>
+              </td>
+              <tr>
+                <td>
+                  <textarea
+                    id="contenido"
+                    name="contenido"
+                    placeholder="Escriba su publicacion aqui..."
+                    rows="10"
+                    cols="50"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="/extranet/subirArchivos.html">Subir archivo</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <button type="submit">Publicar</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h1>Inicio</h1>
+        </td>
+      </tr>
+    </table>
+
+    <table align="center" border="1" cellpadding="10">
+      <tr>
+        <td>
+          <h2>Particular de Matem&aacute;ticas</h2>
+          <p>Doy clases particulares, escribanme al n&uacute;mero....</p>
+        </td>
+        <td>
+          <a href="/intranet/bloquear.html">bloquear</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table align="right">
+            <tr>
+              <td>
+                <a href="">Me gusta</a>
+              </td>
+              <td>
+                <a href="">Guardar</a>
+              </td>
+              <td>
+                <a href="">Fijar</a>
+              </td>
+              <td>
+                <a href="">Descargar</a>
+              </td>
+              <td>
+                <a href="">Compartir</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table align="center" border="1" cellpadding="10">
+      <tr>
+        <td>
+          <h2>Memes Universitarios</h2>
+        </td>
+        <td>
+          <a href="/intranet/bloquear.html">bloquear</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table align="right">
+            <tr>
+              <td>
+                <a href="">Me gusta</a>
+              </td>
+              <td>
+                <a href="">Guardar</a>
+              </td>
+              <td>
+                <a href="">Fijar</a>
+              </td>
+              <td>
+                <a href="">Descargar</a>
+              </td>
+              <td>
+                <a href="">Compartir</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <br />
+
+    <footer>
+      <hr />
+      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
+          <li>
+            <a href="">StudyCoop@gmail.com</a>
+          </li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
