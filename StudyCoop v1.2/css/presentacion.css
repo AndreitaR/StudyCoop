@@ -1,0 +1,146 @@
+/*ESTE ES DISTINTO PORQUE LA PRESENTACION TIENE UNA ESTRUCTURA DISTINTA AL PRINCIPAL, AL IGUAL QUE EL
+INICIO DE SESION Y EL REGISTRO*/
+
+*{
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    background-color: #F7DC6F;
+    background: linear-gradient(90deg, #F2D06B,#F2C166, purple);
+    align-items: center;
+    padding: 10px 15%;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+    color: black;
+}
+
+nav a:hover{
+    color: white;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+footer{
+    background-color: #313A40;
+    color: #fff;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15%;
+}
+
+footer nav a:hover{
+    color: rgb(189, 49, 189);
+}
+
+footer a{
+    color: #fff;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 60px;
+    margin-right: 10px;
+}
+
+.parteArriba{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.imagen-busqueda{
+    background: linear-gradient(180deg, #F2D06B, purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.imagenPrincipal img {
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.busqueda{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.busqueda h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.busqueda-titulo{
+    height: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.busqueda-titulo h1{
+    font-size: 60px;
+}
+
+.buscadorBoton{
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.parteAbajo{
+    text-align: justify;
+}
+
+.parteAbajo h2{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.parteAbajo p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#inputBuscar::placeholder {
+    text-align: center;
+    padding-top: 30px;
+}

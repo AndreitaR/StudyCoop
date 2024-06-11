@@ -1,0 +1,143 @@
+/*CSS GENERAL DE LOS HTML DE LA INTERNET, EXTRANET E INTRANET (PRINCIPALMENTE EL MURO PRINCIPAL)*/
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    align-items: center;
+    padding: 10px 15%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: blueviolet;
+}
+
+main {
+    border-top: solid 1px;
+    margin: 0;
+    width: 85%;
+    min-height: 70vh;
+    background-color: white;
+    padding: 15px 10%;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+aside {
+    width: 15%;
+    background: linear-gradient(90deg,#F2D06B,#F2C166);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+aside nav a {
+    font-size: 70%;
+}
+
+footer {
+    background-color: #313A40;
+    color: #fff;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15%;
+}
+
+footer a {
+    color: #fff;
+}
+
+/*CLASES PARTICULARES (PUEDEN VARIAR POR CADA HTML)*/
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.contenido {
+    display: flex;
+}
+
+.centro {
+    display: flex;
+}
+
+.logoAside {
+    height: 1%;
+    margin-right: 5px;
+}
+
+.buscadorBoton {
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#inputBuscar::placeholder {
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*resultadoBuscarSinRegistro-contenido*/
+
+.resultadoBuscarSinRegistro-contenido{
+    display: inline-block;
+    background-color: gainsboro;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 5%;
+    border: transparent 1px;
+    border-radius: 10px;
+}
+
+.resultadoBuscarSinRegistro-unResultado{
+    display: inline-flex;
+    background-color: white;
+    justify-content: space-between;
+    margin: 5px;
+    width: 100%;
+    padding: 30px 10px;
+    border: transparent 1px;
+    border-radius: 10px;
+}
+
+.resultadoBuscarSinRegistro-unResultado nav a{
+    color: purple;
+}
+
+.resultadoBuscarSinRegistro-unResultado nav a:hover{
+    color: black;
+}
+
