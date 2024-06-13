@@ -1,0 +1,151 @@
+/* Reiniciar estilos de botones */
+button,
+.boton-archivo {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+/* Estilos para centrar la información */
+.informacion {
+  text-align: center;
+  margin: auto; /* Esto centrará horizontalmente en un contenedor de ancho completo */
+  max-width: 600px; /* O ajusta el ancho máximo según necesites */
+}
+/* Estilos para las publicaciones */
+.formulario-publicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 1.8em;
+  text-align: center; /* Añade este estilo para centrar el contenido dentro del formulario */
+}
+.formulario-publicacion form {
+  width: 100%;
+  text-align: left; /* Restaura el texto a la izquierda para el formulario */
+}
+textarea {
+  font-size: 30px; /* Tamaño de la fuente deseado */
+  line-height: 1; /* Altura de línea para mejorar la legibilidad */
+  padding: 8px; /* Añade espacio interno alrededor del texto */
+  width: 100%; /* Ajusta el ancho del textarea al 100% */
+  box-sizing: border-box; /* Mantiene el padding dentro del ancho total */
+}
+.publicacion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publicacion header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.publicacion header img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 40px; /* Ajuste el tamaño de la imagen */
+  width: 40px;
+}
+
+.publicacion header .user-info {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.publicacion header .user-info p {
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.3em; /* Reducción del tamaño de la fuente */
+}
+
+.publicacion header .fecha {
+  color: #777;
+  font-size: 1em; /* Reducción del tamaño de la fuente */
+  margin-left: auto;
+}
+
+.publicacion .contenido {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 1.9em;
+  background-color: #c6bea7;
+  border: 2px solid #eee;
+}
+.publicacion .detalle {
+  background-color: #f9f9f9;
+  border: 1px solid #c6bea7;
+  border-radius: 5px;
+  font-size: 1.7em;
+  padding: 10px;
+  margin: 30px 0;
+}
+
+.publicacion nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.publicacion nav a {
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+.publicacion nav a:hover {
+  background-color: #bbe2f2;
+  color: #012e40;
+}
+/* Estilos específicos para las imágenes dentro de los enlaces */
+.publicacion nav a img {
+  vertical-align: middle; /* Alinea verticalmente las imágenes */
+  margin-right: 5px; /* Añade un pequeño margen derecho entre la imagen y el texto */
+}
+.boton-publicar,
+.boton-archivo {
+  font-size: 14px;
+  color: #333;
+  background-color: #bbe2f2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px; /* Ajusta este margen según necesites */
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+.boton-publicar:hover,
+.boton-archivo:hover {
+  background-color: #012e40;
+  color: #bbe2f2;
+}
+
+.inicio {
+  font-size: 34px; /* Ajusta el tamaño de la fuente según tu preferencia */
+  color: #000000; /* Cambia el color del texto si es necesario */
+  font-weight: bold; /* Ajusta el peso de la fuente si es necesario */
+  display: block; /* Hace que el elemento sea un bloque para ocupar todo el ancho disponible */
+  margin-bottom: 0px; /* Ajusta el margen inferior según sea necesario */
+}
