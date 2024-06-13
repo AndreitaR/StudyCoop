@@ -51,6 +51,9 @@ aside {
     justify-content: center;
     font-size: 25px;
 }
+aside nav{
+    position: fixed;
+}
 
 aside nav a {
     font-size: 70%;
@@ -107,37 +110,5 @@ footer a {
 #inputBuscar::placeholder {
     text-align: center;
     padding-top: 30px;
-}
-
-/*resultadoBuscarSinRegistro-contenido*/
-
-.resultadoBuscarSinRegistro-contenido{
-    display: inline-block;
-    background-color: gainsboro;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px 5%;
-    border: transparent 1px;
-    border-radius: 10px;
-}
-
-.resultadoBuscarSinRegistro-unResultado{
-    display: inline-flex;
-    background-color: white;
-    justify-content: space-between;
-    margin: 5px;
-    width: 100%;
-    padding: 30px 10px;
-    border: transparent 1px;
-    border-radius: 10px;
-}
-
-.resultadoBuscarSinRegistro-unResultado nav a{
-    color: purple;
-}
-
-.resultadoBuscarSinRegistro-unResultado nav a:hover{
-    color: black;
 }
 
