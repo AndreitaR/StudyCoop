@@ -3,8 +3,244 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudyCoop - Iniciar sesi&oacute;n</title>
-    <link rel="stylesheet" href="/css/cssIngresar.css" />
+    <title>StudyCoop - Iniciar sesión</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--CSS incrustado-->
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif; /* Define la fuente del texto para todo el documento */
+        background: linear-gradient(
+          100deg,
+          #6cafd9,
+          #f2d335
+        ); /* Establece un fondo utilizando un degradado lineal */
+        color: #333; /* Define el color del texto */
+        margin: 0; /* Establece los margenes del cuerpo del documento */
+        display: flex; /* Utiliza flexbox para el diseño del cuerpo del documento */
+        flex-direction: column; /* El cuerpo se apila verticalmente */
+        min-height: 100vh; /* Establece una altura mínima del cuerpo del documento */
+        overflow-x: hidden; /* Previene el desbordamiento horizontal */
+      }
+
+      /* Contenedor principal */
+      .contenedor {
+        flex: 1; /* Toma el espacio restante del cuerpo del documento */
+        display: flex; /* Utiliza flexbox para el contenedor principal */
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        margin-top: 50px; /* Añade un margen superior */
+      }
+
+      .marca {
+        color: #f8effc; /* Establece el color del texto */
+        font-size: 2.5em; /* Define el tamaño de la fuente */
+        font-weight: bold; /* Establece el grosor de la fuente */
+      }
+
+      .bienvenido {
+        color: #1f1717; /* Establece el color del texto */
+        font-size: 2rem; /* Define el tamaño de la fuente */
+      }
+
+      /* Estilo formulario */
+      form {
+        padding: 40px; /* Añade relleno dentro del formulario */
+        border: 1px solid #a3bfb5; /* Añade un borde alrededor del formulario */
+        border-radius: 10px; /* Establece el radio de borde */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra al formulario */
+        background-color: rgba(
+          180,
+          185,
+          220,
+          0.2
+        ); /* Establece el color de fondo con transparencia */
+        max-width: 700px; /* Establece el ancho máximo del formulario */
+        width: 100%; /* Establece el ancho al 100% */
+      }
+      /* FLEXBOX es un módulo de diseño en CSS3 que proporciona una 
+manera más eficiente de distribuir el espacio entre los 
+elementos y alinear los elementos dentro de un contenedor*/
+
+      /* Contenedor de entrada */
+      .contenedor-entrada {
+        display: flex; /* Utiliza flexbox para el contenedor de entrada */
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        color: #000; /* Define el color del texto */
+        margin-bottom: 15px; /* Añade un margen inferior */
+        font-size: 1em; /* Define el tamaño de la fuente */
+      }
+
+      .contenedor-entrada label {
+        font-weight: bold; /* Establece el grosor de la fuente */
+        margin-bottom: 5px; /* Añade un margen inferior */
+        font-size: 1em; /* Define el tamaño de la fuente */
+      }
+
+      .contenedor-entrada input {
+        width: 100%; /* Establece el ancho al 100% */
+        padding: 10px; /* Añade relleno alrededor del texto dentro del campo de entrada */
+        border: 1px solid #ccc; /* Añade un borde alrededor del campo de entrada */
+        border-radius: 4px; /* Establece el radio de borde */
+        font-size: 1em; /* Define el tamaño de la fuente */
+        color: #333; /* Define el color del texto */
+        margin-bottom: 10px; /* Añade un margen inferior */
+      }
+      .botonVisible {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 0.7em; /* Ajusta el tamaño de la fuente según tus necesidades */
+        padding: 8px 12px; /* Ajusta el relleno para hacer el botón más grande */
+        transition: transform 0.3s, color 0.3s; /* Suaviza la transición de la transformación y el color */
+        color: #333; /* Establece el color del texto */
+        margin-left: 10px; /* Añade un margen a la izquierda para separar el botón del campo */
+        width: auto; /* Ajusta el ancho del botón */
+        height: auto; /* Ajusta la altura del botón */
+        display: flex; /* Usa flexbox para alinear el contenido */
+        align-items: center; /* Centra el contenido verticalmente */
+        justify-content: center; /* Centra el contenido horizontalmente */
+      }
+
+      /* Efecto de sombra más pronunciado al pasar el ratón */
+      .botonVisible:hover {
+        transform: scale(
+          1.1
+        ); /* Escala ligeramente el botón al pasar el ratón */
+        color: #164659; /* Cambia el color del texto al pasar el ratón */
+      }
+
+      /* Contenedor para el campo de entrada de la contraseña y el botón */
+      .password-container {
+        position: relative; /* Permite posicionar el botón de visibilidad de contraseña */
+        display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+        align-items: center; /* Centra verticalmente los elementos */
+      }
+
+      /* Estilo para el campo de entrada de contraseña */
+      .password-container input {
+        flex: 1; /* Hace que el campo de entrada ocupe el espacio restante */
+      }
+
+      /* Contenedor para el campo de entrada de la contraseña y el botón */
+      .password-container {
+        position: relative; /* Necesario para posicionar el botón dentro del contenedor */
+        display: flex;
+        align-items: center;
+      }
+
+      /* Botones */
+      /* Define los estilos compartidos para los botones primarios y secundarios */
+      button.boton-primario,
+      a.boton-secundario {
+        display: block; /* Los botones se muestran como bloques */
+        padding: 12px; /* Añade relleno alrededor del texto dentro del boton */
+        background-color: #26a621; /* Establece el color de fondo del boton */
+        color: white; /* Establece el color del texto */
+        border: none; /* Elimina el borde del boton */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el boton */
+        text-decoration: none; /* Elimina la decoracion del texto */
+        border-radius: 25px; /* Establece el radio de borde */
+        margin: 10px 0; /* Añade margenes verticales */
+        width: 100%; /* El boton ocupa el 100% del contenedor */
+        text-align: center; /* Centra el texto dentro del boton */
+        font-size: 1em; /* Define el tamaño de la fuente */
+        transition: background-color 0.3s, transform 0.3s; /* Añade una transicion al cambiar el color de fondo y la transformacion */
+      }
+      /* Define los estilos para los botones primarios y secundarios cuando se pasa el raton sobre ellos */
+      button.boton-primario:hover,
+      a.boton-secundario:hover {
+        background-color: #025940; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
+      }
+
+      .button-container {
+        display: flex; /* Utiliza flexbox para el contenedor de botones */
+        flex-direction: column; /* Los botones se apilan verticalmente */
+        flex-wrap: 100%; /* Permite que los botones se envuelvan si es necesario */
+      }
+
+      /* Navegación y botones alineados */
+      .nav-contenedor {
+        display: flex; /* Utiliza flexbox para el contenedor de navegacion */
+        justify-content: space-between; /* Distribuye el espacio restante entre los botones de navegacion */
+        width: 100%; /* El contenedor ocupa el 100% del ancho */
+        padding: 0 20px; /* Añade relleno horizontal */
+      }
+
+      /* Estilo de los botones de navegacion */
+      .nav-boton {
+        padding: 12px 25px; /* Añade relleno alrededor del texto dentro del boton de navegacion */
+        background-color: #26a621; /* Establece el color de fondo del boton de navegacion */
+        color: white !important; /* Fuerza el color del texto a ser blanco */
+        border-radius: 25px; /* Establece el radio de borde */
+        font-size: 1.1em; /* Define el tamaño de la fuente */
+        text-decoration: none !important; /* Elimina la decoracion del texto */
+        transition: background-color 0.3s, transform 0.3s; /* Añade una transicion al cambiar el color de fondo y la transformacion */
+      }
+
+      .nav-boton.izquierda {
+        margin-right: auto; /* Mueve el boton a la izquierda */
+      }
+
+      .nav-boton.derecha {
+        margin-left: auto; /* Mueve el boton a la derecha */
+      }
+
+      /* Cambio de color de fondo al pasar el raton */
+      .nav-boton:hover {
+        background-color: #025940; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
+      }
+
+      /* Footer como pie de página */
+      footer {
+        padding: 20px; /* Añade relleno dentro del pie de pagina */
+        background-color: #13668ad1; /* Establece el color de fondo del pie de pagina */
+        color: rgb(242, 239, 239); /* Define el color del texto */
+        text-align: center; /* Centra el texto */
+        width: 100%; /* El pie de pagina ocupa el 100% del ancho */
+      }
+      /* Lista de navegacion en el pie de pagina*/
+      footer nav ul {
+        list-style: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el relleno */
+      }
+      /* Elementos de lista en la navegacion del pie de pagina */
+      footer nav ul li {
+        display: inline; /* Muestra los elementos de la lista en linea */
+        margin: 0 10px; /* Añade margenes horizontales */
+      }
+      /* Estilo de los enlaces en la lista de navegacion del pie de pagina */
+      footer nav ul li a {
+        color: #fff; /* Establece el color del texto */
+        text-decoration: none; /* Elimina la decoracion del texto */
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.1
+        ); /* Establece el color de fondo con transparencia */
+        padding: 5px 10px; /* Añade relleno alrededor del texto */
+        border-radius: 4px; /* Establece el radio de borde */
+      }
+      /* Cambio de color de fondo al pasar el raton sobre los enlaces */
+      footer nav ul li a:hover {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.3
+        ); /* Cambia el color de fondo cuando se pasa el raton sobre el enlace */
+      }
+    </style>
   </head>
 
   <body>
@@ -15,15 +251,16 @@
           <br />
           <b class="marca">StudyCoop</b>
         </h1>
-        <h2 class="bienvenido">
-          <b>Bienvenido al inicio de sesi&oacute;n</b>
-        </h2>
+        <br />
+        <h2 class="bienvenido"><b>Bienvenido al inicio de sesión</b></h2>
         <h3>
+          <br />
           <!--id es para que coincida con el id de javaScriptinicio.js-->
           <form
             id="loginForm"
             action="/extranet/muro.html"
             method="get"
+            class="validacion"
             novalidate
           >
             <!--novalidate es para que solo se use la validacion de java-->
@@ -31,33 +268,48 @@
               <label for="email">Correo:</label>
               <input
                 type="email"
+                class="form-control"
                 id="email"
                 name="email"
-                placeholder="Ingrese su correo electr&oacute;nico"
+                placeholder="Ingrese su correo electrónico"
                 required
               />
-              <br />
-              <label for="password">Contrase&ntilde;a:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Ingrese su contrase&ntilde;a"
-                required
-              />
-              <br />
             </div>
-            <button type="submit" class="boton">Ingresar</button>
+            <div class="contenedor-entrada">
+              <label for="password">Contraseña:</label>
+              <div class="password-container">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Ingrese su contraseña"
+                  required
+                />
+                <button class="botonVisible" type="button" id="togglePassword">
+                  Mostrar contrase&ntilde;a
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary boton-primario">
+              Ingresar
+            </button>
             <div class="button-container">
-              <a href="/internet/registrar.html" class="boton">Registrarse </a>
-              <a href="" class="boton">Olvid&eacute; mi contrase&ntilde;a</a>
+              <a
+                href="/internet/registrar.html"
+                class="btn btn-secondary boton-secundario"
+                >Registrarse</a
+              >
+              <a href="" class="btn btn-secondary boton-secundario"
+                >Olvidé mi contraseña</a
+              >
             </div>
           </form>
         </h3>
         <br />
         <nav class="nav-contenedor">
-          <a href="/internet/presentacion.html" class="nav-boton izuierda">
-            Atr&aacute;s
+          <a href="/internet/presentacion.html" class="nav-boton izquierda">
+            Atrás
           </a>
           <a href="/internet/buscarSinRegistro.html" class="nav-boton derecha">
             Buscar
@@ -77,11 +329,11 @@
           <li>
             <a href="">StudyCoop@gmail.com</a>
           </li>
-          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+          <li><a href="">Política de Privacidad</a></li>
         </ul>
       </nav>
     </footer>
-    <script src="/js/javaScriptInicio.js"></script>
+    <script src="/js/ValidacionUsuario.js"></script>
     <!--Referencia externa de java-->
   </body>
 </html>
