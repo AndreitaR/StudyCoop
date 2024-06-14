@@ -3,208 +3,257 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/js/validacionBusqueda.js" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/formatoMuro.css" />
     <title>StudyCoop - Principal</title>
   </head>
-
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+      </div>
+      <div class="buscador">
+        <form action="/extranet/resultadoBuscar.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
 
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/actividades.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Actividades </a>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href="/extranet/perfilUsuario.html"> Perfil </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <nav class="enlaces">
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+        <a href="/extranet/perfilUsuario.html"> Perfil </a>
+      </nav>
     </header>
+    <div class="centro">
+      <aside>
+        <nav>
+          <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
+          <br />
+          <a class="menu-link" href="/extranet/suscripciones.html"
+            >Suscripciones</a
+          >
+          <br />
+          <a class="menu-link" href="/extranet/materias.html">Materias</a>
+          <br />
+          <a class="menu-link" href="/extranet/novedadesUsuarios.html"
+            >Novedades</a
+          >
+          <br />
+          <br />
+        </nav>
+      </aside>
 
-    <nav>
-      <br />
-      <a href="/extranet/guardados.html">Guardados</a> <br />
-      <a href="/extranet/suscripciones.html">Suscripciones</a> <br />
-      <a href="/extranet/materias.html">Materias</a> <br />
-      <a href="/extranet/novedadesUsuarios.html">Novedades</a> <br />
-      <br />
-    </nav>
+      <main>
+        <div class="informacion">
+          <p>Primer año UDC</p>
+          <p>Desarrollo de Software</p>
+        </div>
+        <br />
+        <h2>Bienvenido al muro</h2>
+        <br />
 
-    <center>
-      <table border="1" cellpadding="10">
-        <tr>
-          <td align="left">
-            <p>Primer a&ntilde;o UDC</p>
-          </td>
-          <td align="center">
-            <p>Desarrollo de Software</p>
-          </td>
-        </tr>
-      </table>
-      <br />
+        <div class="formulario-publicacion">
+          <form action="/crearPublicacion.php">
+            <table>
+              <tr>
+                <td>
+                  <label for="publicacion"><b>Nueva Publicacion:</b></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <textarea
+                    id="contenido"
+                    name="contenido"
+                    placeholder="Escriba su publicacion aqui..."
+                    rows="10"
+                    cols="50"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
 
-      <form action="/crearPublicacion.php">
-        <table>
-          <td>
-            <label for="publicacion"><b>Nueva Publicacion:</b></label>
-          </td>
-          <tr>
-            <td>
-              <textarea
-                id="contenido"
-                name="contenido"
-                placeholder="Escriba su publicacion aqui..."
-                rows="10"
-                cols="50"
-                required
-              ></textarea>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <a href="/extranet/subirArchivos.html">Subir archivo</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <button type="submit">Publicar</button>
-            </td>
-          </tr>
-        </table>
-      </form>
-
-      <br />
-      <br />
-
-      <b>Inicio</b>
-
-      <table border="1" cellpadding="10">
-        <tr>
-          <td align="left">
+              <tr>
+                <td>
+                  <a href="/extranet/subirArchivos.html" class="boton-archivo"
+                    >Subir archivo</a
+                  >
+                  <button type="submit" class="boton-publicar">Publicar</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <br />
+        <b class="inicio">Inicio</b>
+        <br />
+        <br />
+        <section class="publicacion">
+          <header>
             <img
               src="/imagenes/usuario.png"
               alt="usuario.png"
               height="30px"
               width="30px"
             />
-            <p>Rosa Palca</p>
-          </td>
-          <td align="right">
-            <p>01/09/24</p>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <center>
-              <p>Particular de matem&aacute;tica</p>
-              <table border="1" cellpadding="25">
-                <tr>
-                  <td>
-                    <p>
-                      Doy clases particulares escribanme al n&uacute;mero
-                      299543235
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              <br />
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </center>
-          </td>
-        </tr>
-      </table>
+            <div class="user-info">
+              <p>Rosa Palca</p>
+            </div>
+            <div>
+              <p class="fecha">01/09/24</p>
+            </div>
+          </header>
+          <div class="contenido">
+            <p>Particular de matemática</p>
+          </div>
+          <div class="detalle">
+            <p>Doy clases particulares escribanme al número 299543235</p>
+          </div>
 
-      <br />
-      <br />
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
 
-      <table border="1" cellpadding="10">
-        <tr>
-          <td align="left">
+        <section class="publicacion">
+          <header>
             <img
               src="/imagenes/usuario.png"
               alt="usuario.png"
               height="30px"
               width="30px"
             />
-            <p>Pedro Picapiedra</p>
-          </td>
-          <td align="right">
-            <p>22/08/24</p>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <center>
-              <p>Seguime xd</p>
-              <table border="1" cellpadding="25">
-                <tr>
-                  <td>
-                    <p>Seguime en el insta estoy como @pedrito_pica</p>
-                  </td>
-                </tr>
-              </table>
-              <br />
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </center>
-          </td>
-        </tr>
-      </table>
-
-      <br />
-      <br />
-    </center>
+            <div class="user-info">
+              <p>Pedro Picapiedra</p>
+            </div>
+            <div>
+              <p class="fecha">22/08/24</p>
+            </div>
+          </header>
+          <div class="contenido">
+            <p>Seguime xd</p>
+          </div>
+          <div class="detalle">
+            <p>Seguime en el insta estoy como @pedrito_pica</p>
+          </div>
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
+      </main>
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
+    </div>
 
     <footer>
       <hr />
@@ -215,9 +264,10 @@
           <li>
             <a href="">StudyCoop@gmail.com</a>
           </li>
-          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+          <li><a href="">Política de Privacidad</a></li>
         </ul>
       </nav>
     </footer>
   </body>
 </html>
+
