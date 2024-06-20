@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/js/validacionBusqueda.js" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/formatoMuro.css" />
+    <script src="/js/validacionBusqueda.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Captura del evento submit del formulario de publicación
+        $("#form-publicacion").submit(function (event) {
+          event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+          const contentTextarea = $("#contenido").val().trim();
+
+          if (contentTextarea === "") {
+            alert("Por favor, ingrese contenido en la publicación.");
+          } else {
+            // Simulación de publicación exitosa
+            alert("Publicación creada exitosamente.");
+
+            // Limpiar el textarea después de una publicación exitosa (simulado)
+            $("#contenido").val(""); // Limpiar el textarea
+          }
+        });
+      });
+    </script>
     <title>StudyCoop - Principal</title>
   </head>
   <body>
@@ -74,11 +95,15 @@
         <br />
 
         <div class="formulario-publicacion">
-          <form action="/crearPublicacion.php">
+          <form
+            id="form-publicacion"
+            action="/crearPublicacion.php"
+            method="post"
+          >
             <table>
               <tr>
                 <td>
-                  <label for="publicacion"><b>Nueva Publicacion:</b></label>
+                  <label for="contenido"><b>Nueva Publicacion:</b></label>
                 </td>
               </tr>
               <tr>
@@ -89,7 +114,6 @@
                     placeholder="Escriba su publicacion aqui..."
                     rows="10"
                     cols="50"
-                    required
                   ></textarea>
                 </td>
               </tr>
@@ -270,4 +294,3 @@
     </footer>
   </body>
 </html>
-
