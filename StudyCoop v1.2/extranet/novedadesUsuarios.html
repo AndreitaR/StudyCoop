@@ -3,37 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/novedades.css">
     <link rel="stylesheet" href="/css/general.css">
     <title>StudyCoop - Novedades</title>
 
     <style>
       .novedades{
-          border-radius: 10px;
-          margin: 50px;
-          background-color: rgb(160, 160, 160);
+          border-radius: 10px; /*borde redondeado*/
+          margin: 50px; /**/
+          background-color: rgb(203, 203, 203);
       }
 
       .titulo{
-          background-color: white;
-          border-radius: 10px;
+          background-color: white; /*color del fondo*/
+          border-radius: 10px; /*borde redondeado*/
       }
 
       .lista{
           background-color: white; /*color del fondo*/
           border-radius: 10px; /*borde redondeado*/
           height: 450px; /*alto*/
-          padding: 15px;
-          
+          padding: 15px; /*rellena todos los bordes*/
       }
 
-      .novedadesAnteriores{
-          background-color: white;
-          border-radius: 10px;
-          width: 300px;
-          height: 50px;
-          padding: 15px;
+      .novedades-anteriores{
+          background-color: white; /*color del fondo*/
+          border-radius: 10px; /*borde redondeado*/
+          width: 300px; /*anchura*/
+          height: 50px; /*altura*/
+          padding: 15px; /*rellena todos los bordes*/
       }
+
+      .lista p{
+        font-size: 25px;
+      }
+
+      .fecha{
+        font-size: 20px;
+      }
+
     </style>
   </head>
   <body>
@@ -52,7 +59,6 @@
             placeholder="Buscar..."
             required
           />
-          <button type="submit">Buscar</button>
         </form>
       </div>
 
@@ -95,8 +101,6 @@
         </nav>
       </aside>
 
-
-
       <main class="novedades">
         <div class="titulo">
           <h1>Novedades</h1>
@@ -116,7 +120,7 @@
 
         <br>
         <center>
-          <nav class="novedadesAnteriores">
+          <nav class="novedades-anteriores">
             <a href="">Novedades Anteriores</a>
           </nav>
         </center>
