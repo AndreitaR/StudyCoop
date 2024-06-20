@@ -3,55 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css">
     <title>StudyCoop - B&uacute;squeda</title>
   </head>
 
-  <body bgcolor="#FFF8DC">
-    <div>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <h1>StudyCoop</h1>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="query"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
+  <body>
+    <header>
+      <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+      <h1>StudyCoop</h1>
+      <form action="/extranet/resultadoBuscar.html" method="get">
+        <input
+          type="text"
+          name="query"
+          placeholder="Buscar..."
+          required
+        />
+      </form>
+      <nav>
+        <a href=""> Actividades </a>
+        <a href=""> Notificaciones </a>
+        <a href="/extranet/perfilUsuario.html"> Perfil </a>
+      </nav>
+    </header>
 
-            <td colspan="2">
-              <nav>
-                <a href=""> Actividades </a>
-                <a href=""> Notificaciones </a>
-                <a href="/extranet/perfilUsuario.html"> Perfil </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
+    <div class="centro">
+
+    <aside>
+      <nav>
+        <br />
+        <a href="/extranet/guardados.html">Guardados</a>
+        <br />
+        <a href="/extranet/suscripciones.html">Suscripciones</a>
+        <br />
+        <a href="/extranet/materias.html">Materias</a>
+        <br />
+        <a href="/extranet/novedadesUsuarios.html">Novedades</a>
+        <br />
+      </nav>
+    </aside>
+
+    <main>
+      
+    </main>
+
+    <aside>
+      <nav>
+
+      </nav>
+    </aside>
+
     </div>
 
-    <div>
-      <br />
-      <a href="/extranet/guardados.html">Guardados</a>
-      <br />
-      <a href="/extranet/suscripciones.html">Suscripciones</a>
-      <br />
-      <a href="/extranet/materias.html">Materias</a>
-      <br />
-      <a href="/extranet/novedadesUsuarios.html">Novedades</a>
-      <br />
-    </div>
     <footer>
       <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
