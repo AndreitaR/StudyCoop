@@ -12,12 +12,7 @@ header {
     width: 100%;
     height: 120px;
     justify-content: space-between;
-    background: linear-gradient(
-          300deg,
-          #ffd816,
-          #369d50
-          
-        ); 
+    background-color: #89D99D;
     align-items: center;
     padding: 10px 15%;
 }
@@ -51,7 +46,7 @@ main {
 aside {
     width: 15%;
     background: linear-gradient(
-          135deg,
+          180deg,
           #89D99D,
           #f2d335
         ); /* Establece un fondo utilizando un degradado lineal */
