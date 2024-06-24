@@ -36,6 +36,11 @@
         background-color: rgb(210, 210, 210);
         width: 90px;
         border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contenido {
+        display: none;
       }
     </style>
   </head>
@@ -103,50 +108,51 @@
 
           <div class="materias">
             <h3>1er a&ntilde;o</h3>
-            <p>1er Cuatrimestre</p>
-            <a href=""> Arquitectura y Sistema Operativo </a>
-            <br />
-            <a href="">Ingles I</a>
-            <br />
-            <a href=""> Introducci&oacute;n a la Programaci&oacute;n </a>
-            <br />
-            <a href=""> Laboratorio de Programaci&oacute;n </a>
-            <br />
-            <a href=""> Matem&aacute;tica Aplicada I </a>
+            <div class="contenido">
+              <p>1er Cuatrimestre</p>
+              <a href=""> Arquitectura y Sistema Operativo </a><br />
+              <a href="">Ingles I</a><br />
+              <a href=""> Introducci&oacute;n a la Programaci&oacute;n </a><br />
+              <a href=""> Laboratorio de Programaci&oacute;n </a><br />
+              <a href=""> Matem&aacute;tica Aplicada I </a><br />
+              
+              <br>
 
-            <br />
-    
-            <p>2do Cuatrimestre</p>
-            <a href=""> Estructuras de Datos y Algoritmos</a><br />
-            <a href="">Ingl&eacute;s II</a><br />
-            <a href=""> Matem&aacute;tica Aplicada II</a><br />
-            <a href=""> Paradigmas de Programaci&oacute;n</a><br />
-            <a href=""> T&eacute;cnicas Avanzadas de Programaci&oacute;n</a><br />
+              <p>2do Cuatrimestre</p>
+              <a href=""> Estructuras de Datos y Algoritmos</a><br />
+              <a href="">Ingl&eacute;s II</a><br />
+              <a href=""> Matem&aacute;tica Aplicada II</a><br />
+              <a href=""> Paradigmas de Programaci&oacute;n</a><br />
+              <a href=""> T&eacute;cnicas Avanzadas de Programaci&oacute;n</a><br />
+            </div>
 
-            <br />
+            <br>
 
             <h3>2do a&ntilde;o</h3>
-            <p>1er Cuatrimestre</p>
-            <a href=""> Base de Datos I</a><br />
-            <a href=""> Laboratorio Avanzado de Programaci&oacute;n</a><br />
-            <a href=""> Programaci&oacute;n Web I</a><br />
-            <a href=""> Redes y Seguridad Inform&aacute;tica</a><br />
-    
-            <p>2do Cuatrimestre</p>
-            <a href=""> Ingenier&iacute;a de software</a><br />
-            <a href=""> Programaci&oacute;n Web II</a><br />
-            <a href=""> Base de Datos II</a><br />
+            <div class="contenido">
+              <p>1er Cuatrimestre</p>
+              <a href=""> Base de Datos I</a><br />
+              <a href=""> Laboratorio Avanzado de Programaci&oacute;n</a><br />
+              <a href=""> Programaci&oacute;n Web I</a><br />
+              <a href=""> Redes y Seguridad Inform&aacute;tica</a><br />
+              
+              <br>
 
-            <br />
-    
+              <p>2do Cuatrimestre</p>
+              <a href=""> Ingenier&iacute;a de software</a><br />
+              <a href=""> Programaci&oacute;n Web II</a><br />
+              <a href=""> Base de Datos II</a><br />
+            </div>
+
+            <br>
+            
             <h3>3er a&ntilde;o</h3>
-            <p>1er Cuatrimestre</p>
-            <a href=""> Calidad y Gesti&oacute;n de Procesos de Software</a
-            ><br />
-            <a href=""> Formulaci&oacute;n y Evaluaci&oacute;n de proyectos</a
-            ><br />
-            <a href=""> Pr&aacute;ctica profesional / Trabajo Integrador</a
-            ><br />
+            <div class="contenido">
+              <p>1er Cuatrimestre</p>
+              <a href=""> Calidad y Gesti&oacute;n de Procesos de Software</a><br />
+              <a href=""> Formulaci&oacute;n y Evaluaci&oacute;n de proyectos</a><br />
+              <a href=""> Pr&aacute;ctica profesional / Trabajo Integrador</a><br />
+            </div>
           </div>
         </nav>
       </main>
@@ -172,5 +178,22 @@
         </ul>
       </nav>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var headers = document.querySelectorAll('.materias h3');
+        headers.forEach(function(header) {
+          header.addEventListener('click', function() {
+            var content = header.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+              content.style.display = "block";
+            } else {
+              content.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
+
