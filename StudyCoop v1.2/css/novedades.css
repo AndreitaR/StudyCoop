@@ -1,0 +1,33 @@
+.novedades{
+    border-radius: 10px; /*borde redondeado*/
+    margin: 50px; /**/
+    background-color: rgb(203, 203, 203);
+}
+
+.titulo{
+    background-color: white; /*color del fondo*/
+    border-radius: 10px; /*borde redondeado*/
+}
+
+.lista{
+    background-color: white; /*color del fondo*/
+    border-radius: 10px; /*borde redondeado*/
+    height: 450px; /*alto*/
+    padding: 15px; /*rellena todos los bordes*/
+}
+
+.novedades-anteriores{
+    background-color: white; /*color del fondo*/
+    border-radius: 10px; /*borde redondeado*/
+    width: 300px; /*anchura*/
+    height: 50px; /*altura*/
+    padding: 15px; /*rellena todos los bordes*/
+}
+
+.lista p{
+  font-size: 25px;
+}
+
+.fecha{
+  font-size: 20px;
+}
