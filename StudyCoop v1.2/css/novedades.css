@@ -1,7 +1,7 @@
 .novedades{
     border-radius: 10px; /*borde redondeado*/
     margin: 50px; /**/
-    background-color: rgb(203, 203, 203);
+    background-color: rgb(164, 232, 181);
 }
 
 .titulo{
@@ -26,6 +26,10 @@
 
 .lista p{
   font-size: 25px;
+}
+
+.fecha{
+  font-size: 20px;
 }
 
 .fecha{
