@@ -7,6 +7,62 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/formatoMuro.css">
 	  <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
+    <style>
+      .mi-button {
+        text-decoration: none;
+        position: relative;
+        border: none;
+        font-size: 30px;
+        font-family: inherit;
+        cursor: pointer;
+        color: #000;
+        width: 20em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #89D99D, #f2d335);
+        background-size: 300%;
+        border-radius: 30px;
+        z-index: 1;
+        display: inline-block;
+      }
+
+      .mi-button:hover {
+        animation: ani 8s linear infinite;
+        border: none;
+      }
+
+        @keyframes ani {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        .mi-button:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #89D99D, #f2d335);
+            background-size: 400%;
+            border-radius: 35px;
+            transition: 1s;
+        }
+
+        .mi-button:hover::before {
+            filter: blur(20px);
+        }
+
+        .mi-button:active {
+            background: linear-gradient(32deg, #89D99D, #f2d335);
+        }
+    </style>
   </head>
 
   <body>
@@ -68,8 +124,9 @@
         </div>
       </nav>
       <br />
-      <b class="inicio">Publicaci&oacute;n</b>
+      <a href="/extranet/subirArchivos.html" class="mi-button">Crear Publicaci&oacute;n + </a>
       <br />
+      <br/>
       <section class="publicacion">
         <header>
           <img
@@ -214,7 +271,7 @@
 
     <aside>
       <nav>
-        <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        <a href="/extranet/configurarPerfil.html" > ⚙️ Configuraci&oacute;n</a>
       </nav>
     </aside>
   </div>
