@@ -4,77 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCoop - Principal</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/formatoMuro.css">
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35">
   </head>
 
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+      </div>
 
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/tarea.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Tareas </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> ADMINISTRADOR </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <div class="buscador">
+        <form action="/extranet/resultadoBuscar.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit" class="boton-archivo">Buscar</button>
+        </form>
+      </div>
+
+      <nav class="enlaces">
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> ADMINISTRADOR </a>
+      </nav>
     </header>
-    <nav>
-      <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
-      <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
-    </nav>
-    <table align="center">
-      <tr>
-        <td>
-          <h1>Desarrollo de Software</h1>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <form action="/crearPublicacion.php">
+
+    <div class="centro">
+      <aside>
+        <nav>
+          <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
+          <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
+        </nav>
+      </aside>
+
+      <main>
+        <br />
+        <h2>Bienvenidos al muro</h2>
+        <br />
+
+        <div class="formulario-publicacion">
+          <form
+            id="form-publicacion"
+            action="/crearPublicacion.php"
+            method="post"
+          >
             <table>
-              <td>
-                <label for="publicacion"><b>Nueva Publicaci&oacute;n:</b></label>
-              </td>
+              <tr>
+                <td>
+                  <label for="contenido"><b>Nueva Publicacion:</b></label>
+                </td>
+              </tr>
               <tr>
                 <td>
                   <textarea
@@ -83,105 +81,171 @@
                     placeholder="Escriba su publicacion aqui..."
                     rows="10"
                     cols="50"
-                    required
                   ></textarea>
                 </td>
               </tr>
 
               <tr>
                 <td>
-                  <a href="/extranet/subirArchivos.html">Subir archivo</a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <button type="submit">Publicar</button>
+                  <a
+                   href="/extranet/subirArchivos.html" class="boton-archivo">Subir archivo</a
+                  >
+                  <button type="submit" class="boton-publicar">Publicar</button>
                 </td>
               </tr>
             </table>
           </form>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h1>Inicio</h1>
-        </td>
-      </tr>
-    </table>
+        </div>
+        <br />
+        <b class="inicio">Inicio</b>
+        <br />
+        <br />
+        <section class="publicacion">
+          <header>
+            <img
+              src="/imagenes/usuario.png"
+              alt="usuario.png"
+              height="30px"
+              width="30px"
+            />
+            <div class="user-info">
+              <p>Santiago del Moro</p>
+            </div>
+            <div>
+              <p class="fecha">22/08/24</p>
+            </div>
+          </header>
+          <div class="contenido">
+            <p>Particular de matematica</p>
+          </div>
+          <div class="detalle">
+            <p>Escribanme al numero 0280......</p>
+          </div>
 
-    <table align="center" border="1" cellpadding="10">
-      <tr>
-        <td>
-          <h2>Particular de Matem&aacute;ticas</h2>
-          <p>Doy clases particulares, escribanme al n&uacute;mero....</p>
-        </td>
-        <td>
-          <a href="/intranet/bloquear.html">bloquear</a>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <table align="right">
-            <tr>
-              <td>
-                <a href="">Me gusta</a>
-              </td>
-              <td>
-                <a href="">Guardar</a>
-              </td>
-              <td>
-                <a href="">Fijar</a>
-              </td>
-              <td>
-                <a href="">Descargar</a>
-              </td>
-              <td>
-                <a href="">Compartir</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
+    
+        <br />
 
-    <br />
+          <section class="publicacion">
+            <header>
+              <img
+                src="/imagenes/usuario.png"
+                alt="usuario.png"
+                height="30px"
+                width="30px"
+              />
+              <div class="user-info">
+                <p>El Rubius</p>
+              </div>
+              <div>
+                <p class="fecha">22/08/24</p>
+              </div>
+            </header>
+            <div class="contenido">
+              <p>MEMES UNIVERSITARIOS</p>
+            </div>
 
-    <table align="center" border="1" cellpadding="10">
-      <tr>
-        <td>
-          <h2>Memes Universitarios</h2>
-        </td>
-        <td>
-          <a href="/intranet/bloquear.html">bloquear</a>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <table align="right">
-            <tr>
-              <td>
-                <a href="">Me gusta</a>
-              </td>
-              <td>
-                <a href="">Guardar</a>
-              </td>
-              <td>
-                <a href="">Fijar</a>
-              </td>
-              <td>
-                <a href="">Descargar</a>
-              </td>
-              <td>
-                <a href="">Compartir</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
+      </main>
 
-    <br />
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
+    </div>
 
     <footer>
       <hr />
