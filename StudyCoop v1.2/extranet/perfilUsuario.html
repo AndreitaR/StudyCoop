@@ -4,55 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCoop - Perfil</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/formatoMuro.css">
+	  <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
   </head>
 
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html">
-                <h1>StudyCoop</h1>
-              </a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-            <td>
-              <a href="/extranet/configurarPerfil.html">configuracion</a>
-            </td>
-            <td colspan="2"></td>
-            <td>
-              <img
-                src="/imagenes/usuario.png"
-                alt="Foto de perfil"
-                width="30px"
-                height="30px"
-              />
-            </td>
-            <td>
-              <h2>Flores del Campo</h2>
-              <b> Inform&aacute;tica </b>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+      </div>
+
+      <div class="buscador">
+        <form action="/extranet/resultadoBuscar.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit" class="boton-archivo">Buscar</button>
+        </form>
+      </div>
+
+      <nav class="enlaces">
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+          <a href="">Flores del Campo </a>
+      </nav>
     </header>
 
-    <br />
-
+<div class="centro"> 
+  <aside>
     <nav>
       <br />
       <a href="/extranet/guardados.html">Guardados</a> <br />
@@ -61,8 +58,8 @@
       <a href="/extranet/novedadesUsuarios.html">Novedades</a> <br />
       <br />
     </nav>
-
-    <center>
+  </aside>
+    <main>
       <nav>
         <div>
           <a href="/extranet/suscripciones.html"> Suscripciones 99K </a>
@@ -70,98 +67,157 @@
           <a href=""> Notificaciones 99K </a>
         </div>
       </nav>
-
-      <div>
-        <h2><b>Publicaciones: </b></h2>
-      </div>
-      <br>
-
-      <table border="1" cellpadding="10">
-        <tr>
-          <td align="left">
-            <img
+      <br />
+      <b class="inicio">Publicaci&oacute;n</b>
+      <br />
+      <section class="publicacion">
+        <header>
+          <img
               src="/imagenes/usuario.png"
               alt="usuario.png"
               height="30px"
               width="30px"
             />
-            <p>Flores del Campo</p>
-          </td>
-          <td align="right">
-            <p>01/09/24</p>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <center>
-              <p>Ayuda con matem&aacute;ticas</p>
-              <table border="1" cellpadding="25">
-                <tr>
-                  <td>
-                    <p>
-                      Necesito Particular para matem&aacute;ticas porfa
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              <br />
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </center>
-          </td>
-        </tr>
-      </table>
+            <div class="user-info">
+              <p>Flores del Campo</p>
+            </div>
+            <div>
+              <p class="fecha">01/09/24</p>
+            </div>
+          </header>
+            <div class="contenido">
+              <p>Ayuda con matematica</p>
+            </div>
+            <div class="detalle">
+             <p>Necesito particular para matematica</p>
+           </div>
+           <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+      </section>
 
       <br />
       <br />
 
-      <table border="1" cellpadding="10">
-        <tr>
-          <td align="left">
-            <img
+      <section class="publicacion">
+        <header>
+          <img
               src="/imagenes/usuario.png"
               alt="usuario.png"
               height="30px"
               width="30px"
             />
-            <p>Flores del Campo</p>
-          </td>
-          <td align="right">
-            <p>22/03/22</p>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <center>
-              <p>Mi resumen de estructura de datos</p>
-              <table border="1" cellpadding="25">
-                <tr>
-                  <td>
-                    <p>Aquí les dejo mis res&uacute;menes de Estructura de datos</p>
-                  </td>
-                </tr>
-              </table>
-              <br />
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </center>
-          </td>
-        </tr>
-      </table>
+            <div class="user-info">
+              <p>Flores del Campo</p>
+            </div>
+            <div>
+              <p class="fecha">22/03/22</p>
+            </div>
+          </header>
+            <div class="contenido">
+              <p>Mi resumen de estructura de datos </p>
+            </div>
+            <div class="detalle">
+             <p>Aquí les dejo mis resúmenes de Estructura de datos</p>
+           </div>
+           <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+      </section>
+    </main>
 
-    <br />
-
-    </center>
+    <aside>
+      <nav>
+        <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+      </nav>
+    </aside>
+  </div>
 
     <footer>
       <hr />
