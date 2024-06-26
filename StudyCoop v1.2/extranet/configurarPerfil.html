@@ -4,116 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCoop - Configuraci&oacute;n de perfil</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/formatoMuro.css">
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
+    <style>
+      /* Estilo para la tabla */
+      .custom-table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto; /* Centra la tabla horizontalmente */
+        }
+
+        /* Estilo para las celdas */
+        .custom-table th, .custom-table td {
+            border: 2px solid #F2C166; /* Color del borde */
+            padding: 15px;
+            text-align: center;
+            font-weight: bold; /* Establece el texto en negrita */
+            margin-bottom: 5px; /* Espaciado inferior entre etiquetas */
+        }
+
+        /* Estilo para los encabezados de columna */
+        .custom-table th {
+            background-color: #fafafa;
+        }
+    </style>
   </head>
 
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html">
-                <h1>StudyCoop</h1>
-              </a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-            <td colspan="2"></td>
-            <td>
-              <img
-                src="/imagenes/usuario.png"
-                alt="Foto de perfil"
-                width="30px"
-                height="30px"
-              />
-            </td>
-            <td>
-              <h2>Flores del Campo</h2>
-              <b> Informatica </b>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+      </div>
+
+      <div class="buscador">
+        <form action="/extranet/resultadoBuscar.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit" class="boton-archivo">Buscar</button>
+        </form>
+      </div>
+
+      <nav class="enlaces">
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+          <a href="">Flores del Campo </a>
+      </nav>
     </header>
+      <div class="centro">
+          <aside>
+            <nav>
+              <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA IZQUIERDA-->
+            </nav>
+          </aside>
 
-    <center>
-      <form action="/extranet/configurarPerfil.html" method="post">
-        <table border="1" cellpadding="10">
-          <tr>
-            <td>
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" /><br /><br />
+          <main>
+            <br />
+            <b class="inicio">Configuraci&oacute;n de Perfil</b>
+            <br />
+            <form action="/extranet/configurarPerfil.html" method="post">
+                <table class="custom-table">
+                    <tr>
+                        <td>
+                          <label for="nombre">Nombre:</label>
+                        </td>
+                        <td>
+                          <input type="text" id="nombre" name="nombre" />
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="apellido">Apellido:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="apellido" name="apellido" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Carrera">Carrera:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="Carrera" name="Carrera" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Edad">Edad:</label>
+                      </td>
+                      <td>
+                          <input type="number" min="17" max="99" id="Edad" name="Edad" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Pais">País:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="Pais" name="Pais" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Universidad">Universidad:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="Universidad" name="Universidad" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Apodo">Apodo:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="Apodo" name="Apodo" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Provincia">Provincia:</label>
+                      </td>
+                      <td>
+                          <input type="text" id="Provincia" name="Provincia" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="Contraseña">Contraseña:</label>
+                      </td>
+                      <td>
+                          <input type="password" id="Contraseña" name="Contraseña" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="email">Correo electrónico:</label>
+                      </td>
+                      <td>
+                          <input type="email" id="email" name="email" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="FotoPerfil">Foto de Perfil:</label>
+                    </td>
+                    <td>
+                        <input type="file" id="FotoPerfil" name="FotoPerfil" />
+                    </td> 
+                  </tr>
+                </table>
+                <button type="submit" class="boton-archivo">Guardar</button>
+            </form>
+            <form action="/extranet/perfilUsuario.html" method="get">
+              <button type="submit" class="boton-archivo">Cancelar</button>
+            </form>
+          </main>
 
-              <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" /><br /><br />
+          <aside>
+            <nav>
+              <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+            </nav>
+          </aside>
+      </div>
 
-              <label for="Carrera">Carrera:</label>
-              <input type="text" id="Carrera" name="Carrera" /><br /><br />
-
-              <label for="Edad">Edad</label>
-              <input
-                type="number"
-                min="17"
-                max="99"
-                id="Edad"
-                name="Edad"
-              /><br /><br />
-
-              <label for="Pais">Pa&iacute;s:</label>
-              <input type="text" id="Pais" name="Pais" /><br /><br />
-
-              <label for="Universidad">Universidad:</label>
-              <input
-                type="text"
-                id="Universidad"
-                name="Universidad"
-              /><br /><br />
-
-              <label for="Apodo">Apodo:</label>
-              <input type="text" id="Apodo" name="Apodo" /><br /><br />
-
-              <label for="Provincia">Provincia</label>
-              <input type="text" id="Provincia" name="Provincia" /><br /><br />
-
-              <label for="Contraseña">contrase&ntilde;a</label>
-              <input
-                type="password"
-                id="Contraseña"
-                name="Contraseña"
-              /><br /><br />
-
-              <label for="Foto de Perfil">Foto de Perfil:</label>
-              <input
-                type="file"
-                id="FotoPerfil"
-                name="FotoPerfil"
-              /><br /><br />
-
-              <label for="email">Correo electr&oacute;nico:</label>
-              <input type="email" id="email" name="email" /><br /><br />
-            </td>
-          </tr>
-        </table>
-        <button type="submit">Guardar</button>
-      </form>
-      <form action="/extranet/perfilUsuario.html" method="get">
-        <button type="submit">Cancelar</button>
-      </form>
-    </center>
     <footer>
-      <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
       <nav>
         <ul>
