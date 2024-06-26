@@ -7,6 +7,62 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/formatoMuro.css">
     <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35">
+    <style>
+    .mi-button {
+      text-decoration: none;
+      position: relative;
+      border: none;
+      font-size: 30px;
+      font-family: inherit;
+      cursor: pointer;
+      color: #000;
+      width: 9em;
+      height: 2em;
+      line-height: 2em;
+      text-align: center;
+      background: linear-gradient(90deg, #89D99D, #f2d335);
+      background-size: 300%;
+      border-radius: 30px;
+      z-index: 1;
+      display: inline-block;
+    }
+
+        .mi-button:hover {
+            animation: ani 8s linear infinite;
+            border: none;
+        }
+
+        @keyframes ani {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        .mi-button:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #89D99D, #f2d335);
+            background-size: 400%;
+            border-radius: 35px;
+            transition: 1s;
+        }
+
+        .mi-button:hover::before {
+            filter: blur(20px);
+        }
+
+        .mi-button:active {
+            background: linear-gradient(32deg, #89D99D, #f2d335);
+        }
+    </style>
   </head>
 
   <body>
@@ -58,44 +114,9 @@
 
       <main>
         <br />
-        <h2>Bienvenidos al muro</h2>
+        <h2>Desarrollo de Software</h2>
         <br />
-
-        <div class="formulario-publicacion">
-          <form
-            id="form-publicacion"
-            action="/crearPublicacion.php"
-            method="post"
-          >
-            <table>
-              <tr>
-                <td>
-                  <label for="contenido"><b>Nueva Publicacion:</b></label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <textarea
-                    id="contenido"
-                    name="contenido"
-                    placeholder="Escriba su publicacion aqui..."
-                    rows="10"
-                    cols="50"
-                  ></textarea>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <a
-                   href="/extranet/subirArchivos.html" class="boton-archivo">Subir archivo</a
-                  >
-                  <button type="submit" class="boton-publicar">Publicar</button>
-                </td>
-              </tr>
-            </table>
-          </form>
-        </div>
+        <a href="/intranet/novedadesAdmin.html" class="mi-button">Crear Publicaci&oacute;n + </a>
         <br />
         <b class="inicio">Inicio</b>
         <br />
@@ -167,6 +188,15 @@
               />
               Guardar
             </a>
+            <a href=""
+            ><img
+              src="/imagenes/bloqueo.png"
+              alt="acti.png"
+              height="30px"
+              width="30px"
+            />
+            Bloquear
+          </a>
           </nav>
         </section>
     
@@ -235,6 +265,15 @@
                 width="30px"
               />
               Guardar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/bloqueo.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Bloquear
             </a>
           </nav>
         </section>
