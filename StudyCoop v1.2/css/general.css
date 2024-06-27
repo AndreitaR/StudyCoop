@@ -1,38 +1,107 @@
-/*CSS GENERAL DE LOS HTML DE LA INTERNET, EXTRANET E INTRANET (PRINCIPALMENTE EL MURO PRINCIPAL)*/
-
-* {
-    font-family: 'Roboto';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*con esto creo variables para asignarle los colores que uso en el css*/
+:root {
+    --primary-color: #012e40;
+    --secondary-color: #bbe2f2;
+    --background-color: #f5f5f5;
+    --text-color: #333;
 }
 
+/* Estilo General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Estilo del Formulario de Búsqueda */
+.boton-buscar {
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px; /* Ajusta este margen según necesites */
+    text-align: center;
+    border: none; /* Eliminar borde por defecto */
+}
+
+.boton-buscar:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.buscador {
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgba(140, 143, 169, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Contenedor Bloqueo */
+.contenedor-bloqueo {
+    padding: 40px; /* Añade relleno dentro del formulario */
+    border: 1px solid #a3bfb5; /* Añade un borde alrededor del formulario */
+    border-radius: 10px; /* Establece el radio de borde */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra al formulario */
+    background-color: #BACBD9; /* Establece el color de fondo con transparencia */
+    max-width: 700px; /* Establece el ancho máximo del formulario */
+    width: 100%; /* Establece el ancho al 100% */
+}
+
+/* Otros Estilos */
 header {
     display: flex;
-    width: 100%;
-    height: 120px;
+    width: 70%;
     justify-content: space-between;
-    background-color: #89D99D;
     align-items: center;
     padding: 10px 15%;
+    background-color: var(--primary-color);
+    color: white;
+    position: fixed;
+    top: 0%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+.logoAside {
+  height: 1%;
+  margin-right: 5px;
 }
 
+.contenido {
+  display: flex;
+}
+
+.centro {
+    display: flex;
+}
+.menu-link {
+  text-decoration: none;
+  color: #000000;
+}
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: #bbe2f2;
 }
 
 nav a {
-    font-weight: 600;
-    padding-right: 10px;
+  font-weight: 600;
+  padding-right: 10px;
 }
 
 nav a:hover {
-    color: blueviolet;
+  color: blueviolet;
 }
-
 main {
-    border-top: solid 1px;
+  border-top: solid 1px;
     margin: 0;
     width: 85%;
     min-height: 70vh;
@@ -43,40 +112,50 @@ main {
     font-size: 20px;
 }
 
-aside {
-    width: 15%;
-    background: linear-gradient(
-          180deg,
-          #89D99D,
-          #f2d335
-        ); /* Establece un fondo utilizando un degradado lineal */
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-}
-aside nav{
-    position: fixed;
+.boton-publicar,
+.boton-archivo {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.boton-publicar:hover,
+.boton-archivo:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+
+aside {
+    width: 15%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
 aside nav a {
-    font-size: 120%;/* Aumenta el tamaño de la fuente al 120% */
-    color: #333;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-bottom: 20px; /* Añade un margen inferior entre enlaces */
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  font-size: 118%;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+aside nav{
+  top: 18%;
+  position: fixed;
 }
 aside nav a:hover {
-    background-color: #BBE2F2;
-    color: #012E40;
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-}
-aside nav a:active {
-    transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
-    background-color: #012E40;
-    color: #BBE2F2;
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
 }
 footer {
     background-color: #313A40;
@@ -91,42 +170,7 @@ footer {
 footer a {
     color: #fff;
 }
-
-/*CLASES PARTICULARES (PUEDEN VARIAR POR CADA HTML)*/
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px;
-    margin-right: 10px;
-}
-
-.contenido {
-    display: flex;
-}
-
-.centro {
-    display: flex;
-}
-
-.logoAside {
-    height: 1%;
-    margin-right: 5px;
-}
-
-.buscadorBoton {
-    background-color: #fff;
-    border: 1px solid #333;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 #inputBuscar::placeholder {
-    text-align: center;
-    padding-top: 30px;
+  text-align: center;
+  padding: 30px;
 }
