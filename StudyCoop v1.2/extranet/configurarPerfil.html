@@ -4,48 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCoop - Configuraci&oacute;n de perfil</title>
-    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/prueba.css">
     <link rel="stylesheet" href="/css/formatoMuro.css">
     <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
+    <script src="validacionUsuario.js" defer></script>
     <style>
       /* Estilo para la tabla */
       .custom-table {
             border-collapse: collapse;
-            width: 50%;
+            width: 100%;
             margin: 0 auto; /* Centra la tabla horizontalmente */
+            font-size: 17px;
         }
 
         /* Estilo para las celdas */
         .custom-table th, .custom-table td {
-            border: 2px solid #F2C166; /* Color del borde */
+            border: 1px solid #F2C166; /* Color del borde */
             padding: 15px;
             text-align: center;
             font-weight: bold; /* Establece el texto en negrita */
-            margin-bottom: 5px; /* Espaciado inferior entre etiquetas */
+            margin-bottom: 2px; /* Espaciado inferior entre etiquetas */
         }
 
         /* Estilo para los encabezados de columna */
         .custom-table th {
-            background-color: #fafafa;
+            background-color: #fafafa9f;
         }
         .mi-button {
-          text-decoration: none;
-          position: relative;
-          border: none;
-          font-size: 30px;
-          font-family: inherit;
-          cursor: pointer;
-          color: #000;
-          width: 20em;
-          height: 2em;
-          line-height: 2em;
-          text-align: center;
-          background: linear-gradient(90deg, #20c649, #e3c52f);
-          background-size: 300%;
-          border-radius: 30px;
-          z-index: 1;
-          display: inline-block;
-        }
+        text-decoration: none;
+        position: relative;
+        border: none;
+        font-size: 14px;
+        font-family: inherit;
+        cursor: pointer;
+        color: #fff;
+        width: 15em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        background: linear-gradient(90deg, #012e40, #55aad4);
+        background-size: 300%;
+        border-radius: 30px;
+        z-index: 1;
+        display: inline-block;
+      }
 
             .mi-button:hover {
                 animation: ani 8s linear infinite;
@@ -69,7 +71,7 @@
                 right: -5px;
                 bottom: -5px;
                 z-index: -1;
-                background: linear-gradient(90deg, #89D99D, #f2d335);
+                background: linear-gradient(90deg, #012e40, #55aad4);
                 background-size: 400%;
                 border-radius: 35px;
                 transition: 1s;
@@ -80,7 +82,7 @@
             }
 
             .mi-button:active {
-                background: linear-gradient(32deg, #89D99D, #f2d335);
+                background: linear-gradient(90deg, #012e40, #55aad4);
             }
     </style>
   </head>
