@@ -3,30 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/general.css" />
     <link rel="stylesheet" href="/css/formatoMuro.css" />
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35" />
     <script src="/js/validacionBusqueda.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--JavaScript-->
     <script>
       $(document).ready(function () {
+        // modal
+        var modal = $("#myModal");
+        // botón que abre el modal
+        var btn = $("#myBtn");
+        // span cierra el modal
+        var span = $(".close");
+        // abre el modal cuando el usuario lo aprete
+        btn.on("click", function () {
+          modal.show();
+        });
+        // se cierra el modal cuando se aprete la x
+        span.on("click", function () {
+          modal.hide();
+        });
+        // se cierra el modal caundo se apriete fuera del mismo
+        $(window).on("click", function (event) {
+          if ($(event.target).is(modal)) {
+            modal.hide();
+          }
+        });
         // Captura del evento submit del formulario de publicación
         $("#form-publicacion").submit(function (event) {
-          event.preventDefault(); // Prevenir el envío del formulario por defecto
-
+          event.preventDefault(); // Prevenir el envio del formulario por defecto
           const contentTextarea = $("#contenido").val().trim();
-
           if (contentTextarea === "") {
             alert("Por favor, ingrese contenido en la publicación.");
           } else {
             // Simulación de publicación exitosa
             alert("Publicación creada exitosamente.");
-
             // Limpiar el textarea después de una publicación exitosa (simulado)
             $("#contenido").val(""); // Limpiar el textarea
           }
         });
       });
     </script>
+    <style>
+      /*ventana emergente*/
+      .modal {
+        /* Oculto por defecto */
+        position: fixed; /* Fijar en la ventana */
+        /*con estos dos me aseguro que ocupe toda la pantalla*/
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 0, 0, 0.7); /* Color de fondo con opacidad */
+      }
+      .modal-content {
+        background-color: #012e40e0;
+        margin: 17% auto;
+        padding: 20px;
+        border: 1px solid #000000;
+        width: 50%;
+      }
+      label[for="contenido"] {
+        font-size: 20px;
+        font-weight: bold; /*relleno  */
+        color: rgb(255, 255, 255); /* Cambia el color del texto a blanco */
+      }
+      .close {
+        color: #ffffff;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .informacion {
+        font-size: 20px;
+        font-weight: bold; /*letra mas negrita */
+        color: rgb(0, 0, 0); /* Cambia el color del texto a negro */
+      }
+      h2 {
+        font-size: 50px;
+        font-weight: bold;
+        color: black;
+      }
+    </style>
+
     <title>StudyCoop - Principal</title>
   </head>
   <body>
@@ -87,47 +160,41 @@
 
       <main>
         <div class="informacion">
-          <p>Primer año UDC</p>
+          <p>Primer a&ntilde;o UDC</p>
           <p>Desarrollo de Software</p>
         </div>
         <br />
         <h2>Bienvenido al muro</h2>
         <br />
+        <!-- Botón para abrir la ventana emergente -->
+        <button id="myBtn" class="boton-publicar">
+          Crear Publicaci&oacute;n</button
+        ><br />
+        <!-- ventana emergente (modal)-->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form
+              id="form-publicacion"
+              action="/crearPublicacion.php"
+              method="post"
+            >
+              <br />
+              <label for="contenido"><p>Nueva Publicaci&oacute;n:</p></label>
+              <textarea
+                id="contenido"
+                name="contenido"
+                placeholder="Escriba su publicacion aqui..."
+                rows="10"
+                cols="50"
+              ></textarea>
 
-        <div class="formulario-publicacion">
-          <form
-            id="form-publicacion"
-            action="/crearPublicacion.php"
-            method="post"
-          >
-            <table>
-              <tr>
-                <td>
-                  <label for="contenido"><b>Nueva Publicacion:</b></label>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <textarea
-                    id="contenido"
-                    name="contenido"
-                    placeholder="Escriba su publicacion aqui..."
-                    rows="10"
-                    cols="50"
-                  ></textarea>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                  <a href="/extranet/subirArchivos.html" class="boton-archivo"
-                    >Subir archivo</a
-                  >
-                  <button type="submit" class="boton-publicar">Publicar</button>
-                </td>
-              </tr>
-            </table>
-          </form>
+              <a href="/extranet/subirArchivos.html" class="boton-archivo"
+                >Subir archivo</a
+              >
+              <button type="submit" class="boton-publicar">Publicar</button>
+            </form>
+          </div>
         </div>
         <br />
         <b class="inicio">Inicio</b>
@@ -144,15 +211,15 @@
             <div class="user-info">
               <p>Rosa Palca</p>
             </div>
-            <div>
-              <p class="fecha">01/09/24</p>
+            <div class="fecha">
+              <p>01/09/24</p>
             </div>
           </header>
           <div class="contenido">
-            <p>Particular de matemática</p>
+            <p>Particular de matem&aacute;tica</p>
           </div>
           <div class="detalle">
-            <p>Doy clases particulares escribanme al número 299543235</p>
+            <p>Doy clases particulares escribanme al n&uacute;mero 299543235</p>
           </div>
 
           <nav>
@@ -214,8 +281,8 @@
             <div class="user-info">
               <p>Pedro Picapiedra</p>
             </div>
-            <div>
-              <p class="fecha">22/08/24</p>
+            <div class="fecha">
+              <p>22/08/24</p>
             </div>
           </header>
           <div class="contenido">
@@ -280,15 +347,14 @@
     </div>
 
     <footer>
-      <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
       <nav>
         <ul>
           <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
           <li>
-            <a href="">StudyCoop@gmail.com</a>
+            <a href="">studyCoop@gmail.com</a>
           </li>
-          <li><a href="">Política de Privacidad</a></li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
         </ul>
       </nav>
     </footer>
