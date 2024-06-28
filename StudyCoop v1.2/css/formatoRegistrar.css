@@ -1,10 +1,9 @@
-/* Estilos generales */
+      /* Estilos generales */
       body {
         font-family: Arial, sans-serif; /* Define la fuente del texto para todo el documento */
         background: linear-gradient(
-          100deg,
-          #6cafd9,
-          #f2d335
+          190deg,
+         #087faa, #05455e
         ); /* Establece un fondo utilizando un degradado lineal */
         color: #333; /* Define el color del texto */
         margin: 0; /* Establece los margenes del cuerpo del documento */
@@ -82,8 +81,8 @@ elementos y alinear los elementos dentro de un contenedor*/
         border: none;
         background-color: transparent;
         cursor: pointer;
-        font-size: 0.7em; /* Ajusta el tamaño de la fuente según tus necesidades */
-        padding: 8px 12px; /* Ajusta el relleno para hacer el botón más grande */
+        font-size: 0.7em; /* Ajusta el tamaño de la fuente  */
+        padding: 8px 12px; /* Ajusta el relleno para hacer el botón sea más grande */
         transition: transform 0.3s, color 0.3s; /* Suaviza la transición de la transformación y el color */
         color: #333; /* Establece el color del texto */
         margin-left: 10px; /* Añade un margen a la izquierda para separar el botón del campo */
@@ -94,12 +93,12 @@ elementos y alinear los elementos dentro de un contenedor*/
         justify-content: center; /* Centra el contenido horizontalmente */
       }
 
-      /* Efecto de sombra más pronunciado al pasar el ratón */
+      /* Efecto de sombra al pasar el mouse */
       .botonVisible:hover {
         transform: scale(
           1.1
-        ); /* Escala ligeramente el botón al pasar el ratón */
-        color: #164659; /* Cambia el color del texto al pasar el ratón */
+        ); /* Escala ligeramente el botón al pasar el mouse */
+        color: #164659; /* Cambia el color del texto al pasar el mouse */
       }
 
       /* Contenedor para el campo de entrada de la contraseña y el botón */
@@ -118,8 +117,8 @@ elementos y alinear los elementos dentro de un contenedor*/
       button.boton-primario,
       a.boton-secundario {
         display: block; /* Los botones se muestran como bloques */
-        padding: 12px; /* Añade relleno alrededor del texto dentro del boton */
-        background-color: #26a621; /* Establece el color de fondo del boton */
+        padding: 10px; /* Añade relleno alrededor del texto dentro del boton */
+        background-color: #012e40; /* Establece el color de fondo del boton */
         color: white; /* Establece el color del texto */
         border: none; /* Elimina el borde del boton */
         cursor: pointer; /* Cambia el cursor al pasar sobre el boton */
@@ -134,7 +133,7 @@ elementos y alinear los elementos dentro de un contenedor*/
       /* Define los estilos para los botones primarios y secundarios cuando se pasa el raton sobre ellos */
       button.boton-primario:hover,
       a.boton-secundario:hover {
-        background-color: #025940; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
+        background-color: #137eab; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
       }
 
       .button-container {
@@ -145,16 +144,16 @@ elementos y alinear los elementos dentro de un contenedor*/
 
       /* Navegación y botones alineados */
       .nav-contenedor {
-        display: flex; /* Utiliza flexbox para el contenedor de navegacion */
-        justify-content: space-between; /* Distribuye el espacio restante entre los botones de navegacion */
-        width: 100%; /* El contenedor ocupa el 100% del ancho */
+        display: flex;
+        justify-content: space-between; /* Distribuye el espacio restante entre los botones */
+        width: 100%; 
         padding: 0 20px; /* Añade relleno horizontal */
       }
 
       /* Estilo de los botones de navegacion */
       .nav-boton {
         padding: 12px 25px; /* Añade relleno alrededor del texto dentro del boton de navegacion */
-        background-color: #26a621; /* Establece el color de fondo del boton de navegacion */
+        background-color: #012e40; /* Establece el color de fondo del boton de navegacion */
         color: white !important; /* Fuerza el color del texto a ser blanco */
         border-radius: 25px; /* Establece el radio de borde */
         font-size: 1.1em; /* Define el tamaño de la fuente */
@@ -172,16 +171,16 @@ elementos y alinear los elementos dentro de un contenedor*/
 
       /* Cambio de color de fondo al pasar el raton */
       .nav-boton:hover {
-        background-color: #025940; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
+        background-color: #13668ad1; /* Cambia el color de fondo cuando se pasa el raton sobre el boton */
       }
 
       /* Footer como pie de página */
       footer {
-        padding: 20px; /* Añade relleno dentro del pie de pagina */
-        background-color: #13668ad1; /* Establece el color de fondo del pie de pagina */
+        padding: 20px; /* Añade relleno*/
+        background-color: #012e40; /* Establece el color de fondo del pie de pagina */
         color: rgb(242, 239, 239); /* Define el color del texto */
-        text-align: center; /* Centra el texto */
-        width: 100%; /* El pie de pagina ocupa el 100% del ancho */
+        text-align: center;
+        width: 100%;
       }
       /* Lista de navegacion en el pie de pagina*/
       footer nav ul {
@@ -203,7 +202,7 @@ elementos y alinear los elementos dentro de un contenedor*/
           255,
           0.1
         ); /* Establece el color de fondo con transparencia */
-        padding: 5px 10px; /* Añade relleno alrededor del texto */
+        padding: 5px 10px;
         border-radius: 4px; /* Establece el radio de borde */
       }
       /* Cambio de color de fondo al pasar el raton sobre los enlaces */
@@ -213,5 +212,5 @@ elementos y alinear los elementos dentro de un contenedor*/
           255,
           255,
           0.3
-        ); /* Cambia el color de fondo cuando se pasa el raton sobre el enlace */
+        );
       }
