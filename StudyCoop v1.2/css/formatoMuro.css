@@ -1,4 +1,4 @@
-/* Reiniciar estilos de botones */
+/* Reiniciar estilos de botones(te da control total sobre la apariencia y el comportamiento de los botones sin que otros estilos interfieran.) */
 button,
 .boton-archivo {
   background: none;
@@ -13,7 +13,7 @@ button,
 .informacion {
   text-align: center;
   margin: auto; /* Esto centrará horizontalmente en un contenedor de ancho completo */
-  max-width: 600px; /* O ajusta el ancho máximo según necesites */
+  max-width: 600px; /*ajusta el ancho maximo */
 }
 /* Estilos para las publicaciones */
 .formulario-publicacion {
