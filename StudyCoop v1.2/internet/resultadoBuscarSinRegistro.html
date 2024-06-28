@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyCoop - B&uacute;squeda de recursos</title>
+    <link rel="stylesheet" href="/css/general2.css" />
+    <link rel="icon" href="/StudyCoop/imagenes/StudyCoop.png" sizes="32x32" />
+    <script src="/javaScript/buscadorSugerencias.js"></script>
+    <script src="/javaScript/validacionBusqueda.js"></script>
+    <style>
+      /*resultadoBuscarSinRegistro-contenido*/
+
+      main h3{
+        font-size: 35px;
+      }
+
+      .resultadoBuscarSinRegistro-contenido {
+        display: inline-block;
+        background-color: gainsboro;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px 5%;
+        border: transparent 1px;
+        border-radius: 10px;
+      }
+
+      .resultadoBuscarSinRegistro-unResultado {
+        display: inline-flex;
+        background-color: white;
+        justify-content: space-between;
+        margin: 5px;
+        width: 100%;
+        padding: 30px 10px;
+        border: transparent 1px;
+        border-radius: 10px;
+      }
+
+      .resultadoBuscarSinRegistro-unResultado nav a {
+        color: purple;
+      }
+
+      .resultadoBuscarSinRegistro-unResultado nav a:hover {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="logo">
+        <a href="/internet/presentacion.html">
+          <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" href="/internet/presentacion.html"/> 
+          <h1>StudyCoop</h1>
+        </a>  
+      </div>
+
+      <div class="buscador">
+        <form action="/internet/ingresar.html" method="get">
+          <input id="botonBusqueda" class="buscadorBoton" type="text" name="buscar" autocomplete="off" placeholder="Buscar..." required />
+          <script src="/js/borrarInput.js"></script>
+        </form>
+      </div>
+      
+      <nav class="enlaces">
+        <a href="/internet/ingresar.html"><img src="/imagenes/actividades.png" alt="">Actividades</a>
+        <a href="/internet/ingresar.html"><img src="/imagenes/notificaciones.png" alt="">Notificaciones</a>
+        <a href="/internet/ingresar.html"><img src="/imagenes/usuario.png" alt="">Perfil</a>
+      </nav>
+
+    </header>
+
+    <div class="centro">
+      <aside>
+        <nav>
+          <a href="/internet/ingresar.html"> Guardados</a>
+          <a href="/internet/ingresar.html"> Suscripciones</a>
+          <a href="/internet/ingresar.html"> Materias</a>
+          <a href="/internet//ingresar.html"> Novedades</a>
+        </nav>
+      </aside>
+
+      <main>
+        <h3>Resultados de b&uacute;squeda:</h3>
+
+        <div class="resultadoBuscarSinRegistro-contenido">
+          <!--Hardcodeado para muestra, todo esto debe ser dinamico-->
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/pdf.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Biolog&iacute;a.pdf</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <!--A PARTIR DE ACA HAY REPETICIONES APROPOSITO PARA MOSTRAR
+          COMO SE VERIA LA PAGINA CON MUCHISIMAS BUSQUEDAS; ESTO SERA 
+          DINAMICO DESPUES, BORRAR ALGUNOS SI MOLESTA-->
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/pdf.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Biolog&iacute;a.pdf</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/pdf.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Biolog&iacute;a.pdf</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/pdf.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Biolog&iacute;a.pdf</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/pdf.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Biolog&iacute;a.pdf</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+
+          <div class="resultadoBuscarSinRegistro-unResultado">
+            <div class="resultadoBuscarSinRegistro-unResultado-logo">
+              <img
+                src="/imagenes/word.png"
+                alt="pdf.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="resultadoBuscarSinRegistro-unResultado-titulo">
+              <h5>Parcial-Literatura.docx</h5>
+            </div>
+            <nav class="resultadoBuscarSinRegistro-unResultado-navegacion">
+              <a href="/internet/ingresar.html">Descargar</a>
+              <a href="/internet/ingresar.html">Compartir</a>
+            </nav>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
+    </div>
+
+    <footer>
+      <img src="/imagenes/StudyCoop.png" alt="logo" />
+      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
+          <li>
+            <a href="">StudyCoop@gmail.com</a>
+          </li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

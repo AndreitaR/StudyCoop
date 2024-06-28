@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyCoop - B&uacute;squeda de recursos</title>
+    <link rel="stylesheet" href="/css/general2.css">
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
+    <script src="/javaScript/buscadorSugerencias.js"></script>
+    <script src="/javaScript/validacionBusqueda.js"></script>
+    <script src="/javaScript/buscarEnter.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      
+      <div class="logo">
+        <a href="/internet/presentacion.html">
+          <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" href="/internet/presentacion.html"/> 
+          <h1>StudyCoop</h1>
+        </a>  
+      </div>
+
+      <div class="buscador">
+        <form action="/internet/resultadoBuscarSinRegistro.html" method="get"
+            onsubmit="javascript:return esParametroBusquedaValido()">
+            <div>
+              <input id="buscador" class="buscadorBoton" type="text" name="buscar" autocomplete="off" placeholder="Buscar..." required />
+              <button class="btn">
+                <img src="/imagenes/lupa.png" width="30px">
+            </button>
+            </div>
+        </form>
+        <div id="sugerencias">
+          <div id="message-titulo">Sugerencias:</div>
+          <nav id="message-sugerencias">
+            <ul id="message-sugerencias-lista"></ul>
+          </nav>
+        </div>
+        <script src="/js/buscadorSugerencias.js"></script>
+      </div>
+      
+      <nav class="enlaces">
+        <a href="/internet/ingresar.html"><img src="/imagenes/actividades.png" alt="">Actividades</a>
+        <a href="/internet/ingresar.html"><img src="/imagenes/notificaciones.png" alt="">Notificaciones</a>
+        <a href="/internet/ingresar.html"><img src="/imagenes/usuario.png" alt="">Perfil</a>
+      </nav>
+
+    </header>
+
+    <div id="centro" class="centro">
+
+      <aside>
+        <nav>
+          <a href="/internet/ingresar.html"> Guardados</a> 
+          <a href="/internet/ingresar.html"> Suscripciones</a> 
+          <a href="/internet/ingresar.html"> Materias</a> 
+          <a href="/internet//ingresar.html"> Novedades</a> 
+        </nav>
+      </aside>
+
+      <main>
+
+        <div class="contenido">
+          
+        </div>
+        
+      </main>
+
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
+
+    </div>
+
+  </body>
+</html>
