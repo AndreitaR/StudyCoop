@@ -1,153 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <script src=""></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="/js/validacionBusqueda.js"></script>
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/formatoMuro.css" />
     <title>StudyCoop - Secci&oacute;n de guardados</title>
   </head>
 
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/actividades.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Actividades </a>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href="/extranet/perfilUsuario.html"> Perfil </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+      </div>
+      <div class="buscador">
+        <form action="/extranet/resultadoBuscar.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+      <nav class="enlaces">
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+        <a href="/extranet/perfilUsuario.html"> Perfil </a>
+      </nav>
     </header>
+    <div class="centro">
+      <aside>
+        <nav>
+          <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
+          <br />
+          <a class="menu-link" href="/extranet/suscripciones.html"
+            >Suscripciones</a
+          >
+          <br />
+          <a class="menu-link" href="/extranet/materias.html">Materias</a>
+          <br />
+          <a class="menu-link" href="/extranet/novedadesUsuarios.html"
+            >Novedades</a
+          >
+          <br />
+          <br />
+        </nav>
+      </aside>
+      <main>
+        <div class="informacion">
+          <b>Guardados</b>
+        </div>
 
-    <nav>
-      <br />
-      <a href="/extranet/guardados.html">Guardados</a> <br />
-      <a href="/extranet/suscripciones.html">Suscripciones</a> <br />
-      <a href="/extranet/materias.html">Materias</a> <br />
-      <a href="/extranet/novedadesUsuarios.html">Novedades</a> <br />
-      <br />
-    </nav>
-
-    <center>
-      <div>
-        <b>Guardados</b>
-      </div>
-
-      <br /><br />
-
-      <div>
-        <table border="1" cellpadding="10">
-          <tr>
-            <td align="left">
+        <br />
+        <br />
+        <section class="publicacion">
+          <header>
+            <img
+              src="/imagenes/usuario.png"
+              alt="usuraio.png"
+              height="30px"
+              width="30px"
+            />
+            <div class="user-info">
               <p>Rosa Palca</p>
-            </td>
-            <td align="right">
+            </div>
+            <div class="fecha">
               <p>01/09/24</p>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <p>Trabajo pr&aacute;ctico laboratorio</p>
-              <a href="">
-                <p>Ver documento</p>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </center>
+            </div>
+          </header>
+          <div class="contenido">
+            <p>Trabajo pr&aacute;ctico laboratorio</p>
+          </div>
+          <div class="detalle">
+            <a class="detalle-p" href="">
+              <p>Ver documento</p>
+            </a>
+          </div>
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
 
-    <br />
-    <br />
-
-    <center>
-      <div>
-        <table border="1" cellpadding="10">
-          <tr>
-            <td align="left">
+        <br />
+        <br />
+        <section class="publicacion">
+          <header>
+            <img
+              src="/imagenes/usuario.png"
+              alt="usuario.png"
+              height="30px"
+              width="30px"
+            />
+            <div class="user-info">
               <p>Francias Garcia</p>
-            </td>
-            <td align="right">
+            </div>
+            <div class="fecha">
               <p>01/08/24</p>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <p>Parcial de 1er a&ntilde;o de introduc. a la program.</p>
-              <a href="">
-                <p>Ver documento</p>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <nav>
-                <a href=""> Reaccionar </a>
-                <a href=""> Comentar </a>
-                <a href=""> Compartir </a>
-                <a href=""> Descargar </a>
-                <a href=""> Guardar </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </center>
-
-    <br />
-    <br />
-
+            </div>
+          </header>
+          <div class="contenido">
+            <p>Parcial de 1er a&ntilde;o de introduc. a la program.</p>
+          </div>
+          <div class="detalle">
+            <a class="detalle-a" href="">
+              <p>Ver documento</p>
+            </a>
+          </div>
+          <nav>
+            <a href=""
+              ><img
+                src="/imagenes/reaccion.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />Reaccionar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/comentar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Comentar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/compartir.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Compartir
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/descargar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Descargar
+            </a>
+            <a href=""
+              ><img
+                src="/imagenes/guardar.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+              />
+              Guardar
+            </a>
+          </nav>
+        </section>
+      </main>
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
+    </div>
     <footer>
       <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
