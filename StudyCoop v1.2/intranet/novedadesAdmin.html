@@ -1,116 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCoop - Novedades</title>
-  </head>
-  <body bgcolor="#FFF8DC">
-    <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/novedades.css">
+    <style>
 
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/tarea.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Tareas </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> ADMINISTRADOR </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
+        body{
+        margin-top: 100px;
+        }
+        
+        form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        form label {
+            font-size: 18px;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .botonPublicar{
+          background-color: white; /*color del fondo*/
+          border-radius: 10px; /*borde redondeado*/
+          width: 300px; /*anchura*/
+          height: 50px; /*altura*/
+          padding: 15px; /*rellena todos los bordes*/
+        }
+
+        .botonPublicar:hover {
+            background-color: #e9e9e9;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+            <a href="../extranet/muro.html"><h1>StudyCoop</h1></a>
+        </div>
+    
+        <form action="/extranet/resultadoBuscar.html" method="get">
+            <input
+              type="text"
+              name="buscar"
+              placeholder="Buscar..."
+              required
+            />
+          </form>
+
+        <nav class="enlaces">
+            <img
+                src="../imagenes/actividades.png"
+                alt="acti.png"
+                height="30px"
+                width="30px"
+            />
+            <a href=""> Actividades </a>
+            <img
+                src="../imagenes/notificaciones.png"
+                alt="noti.png"
+                height="30px"
+                width="30px"
+            />
+            <a href=""> Notificaciones </a>
+            <img
+                src="../imagenes/usuario.png"
+                alt="usuario.png"
+                height="30px"
+                width="30px"
+            />
+            <a href="../extranet/perfilUsuario.html"> Admin </a>
+        </nav>
     </header>
 
-    <nav>
-      <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
-      <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
-    </nav>
-    <div>
-      <center>
-        <h1>Subir Novedades</h1>
-        <p>
-          Mant&eacute;n a todos al tanto de las &uacute;ltimas novedades sobre
-          StudyCoop.
-        </p>
-      </center>
+    <div class="centro">
+        <aside>
+          <nav>
+            <a class="menu-link" href="../extranet/guardados.html">Subir Novedad</a>
+            <br />
+            <a class="menu-link" href="..extranet/suscripciones.html">Gesti&oacute;n Usuario</a
+            >
+            <br />
+            <br />
+          </nav>
+        </aside>
+
+        <main class="novedades">
+            <div class="titulo">
+                <h1>Publicar Novedades</h1>
+            </div>
+            <br>
+        
+            <ol class="lista">
+                <form action="novedadesAdmin.html" method="post">
+                    <input type="text" id="nuevoTitulo" name="nuevoTitulo" placeholder="Escribe el t&iacute;tulo" required>
+                    <br><br>
+                    <textarea id="nuevoContenido" name="nuevoContenido" rows="13" cols="50" placeholder="Escribe el contenido de la novedad" required></textarea>
+                    <br><br>
+                </form>
+            </ol>
+            
+            <br>
+            <button type="submit" form="form" class="botonPublicar">Publicar</button>
+            <br>
+        
+            <br>
+            <center>
+                <nav class="novedades-anteriores">
+                    <a href="#" class="btn btn-link">Ver Historial de Novedades</a>
+                </nav>
+            </center>
+        </main>
+
+        <aside>
+            <nav>
+                <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+            </nav>
+        </aside>
+
     </div>
 
-    <center>
-      <main>
-        <label for="novedad">Novedades:</label>
-        <form action="publicarNovedad" method="post">
-          <div>
-            <textarea
-              id="novedad"
-              name="novedad"
-              rows="10"
-              cols="50"
-              placeholder="Escribe aqu&iacute; las novedades..."
-              required
-            ></textarea>
-          </div>
-          <br />
-          <div>
-            <button type="submit">Publicar Novedad</button>
-          </div>
-          <br>
-          <nav>
-            <a href=""> Ver Historial de Novedades </a>
-          </nav>
-        </form>
-      </main>
-    </center>
-    <br />
-
     <footer>
-      <hr />
-      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
-      <nav>
-        <ul>
-          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
-          <li>
-            <a href="">StudyCoop@gmail.com</a>
-          </li>
-          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
-        </ul>
-      </nav>
+        <hr />
+        <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="../internet/presentacion.html">Acerca de Nosotros</a></li>
+                <li>
+                    <a href="">StudyCoop@gmail.com</a>
+                </li>
+                <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+            </ul>
+        </nav>
     </footer>
-  </body>
+</body>
 </html>
