@@ -4,36 +4,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/prueba.css">
     <title>StudyCoop - B&uacute;squeda</title>
     <style>
       .filtro{
-        padding: 10px;
-        background-color: rgb(210, 210, 210);
-        text-align: center;
-        border-radius: 5px;
-        width: 200px;
-        float: right;
-      }
-
-      .filtro nav{
-        background-color: rgb(255, 255, 255);
+        font-weight: bold;
+        background-color: var(--background-color);
         border-radius: 10px;
+        padding: 10px;
         text-align: center;
-        padding-top: 20px;
       }
 
-      .filtro a{
-        background-color: rgb(210, 210, 210);
-        border-radius: 5px;
-        padding: 5px;
+      .filtro p{
+        top: 30%;
+        color: rgb(0, 0, 0);
       }
 
       .documentosEncontrados{
-        background-color: rgb(218, 218, 218);
+        color: white;
+        font-weight: bold;
+        font-size: 120%;
+        background-color: var(--primary-color);
         border-radius: 10px;
         padding: 15px;
-        width: 50%;
+        width: 80%;
         margin: auto;
       }
 
@@ -86,10 +80,15 @@
 
       <aside>
         <nav>
-          <a href="/extranet/guardados.html">Guardados</a> <br />
-          <a href="/extranet/guardados.html">Suscripciones</a> <br />
-          <a href="/extranet/materias.html">Materias</a> <br />
-          <a href="/extranet/novedadesUsuarios.html">Novedades</a> <br />
+          <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
+          <br />
+          <a class="menu-link" href="/extranet/suscripciones.html">Suscripciones</a>
+          <br /> 
+          <a class="menu-link" href="/extranet/materias.html">Materias</a>
+          <br />
+          <a class="menu-link" href="/extranet/novedadesUsuarios.html">Novedades</a>
+          <br />
+          <br />
         </nav>
       </aside>
 
@@ -98,16 +97,6 @@
 
       <main>
         <h3>Resultados de b&uacute;squeda:</h3> 
-        
-        <div class="filtro">
-          <p>Filtro de b&uacute;squeda:</p> <br>
-          <nav>
-            <a href="">Archivos</a> <br /> <br>
-            <a href="">Materia</a> <br /> <br>
-            <a href="">A&ntilde;o</a> <br /> <br>
-            <a href="">Carrera</a> <br /> <br>
-          </nav>
-        </div>
 
         <br /><br />
 
@@ -204,8 +193,13 @@
       </main>
 
       <aside>
-        <nav>
+        <nav class="filtro">
+            <p>Filtro de b&uacute;squeda:</p>
 
+            <a class="menu-link" href="">Archivos</a> <br /> <br>
+            <a class="menu-link" href="">Materia</a> <br /> <br>
+            <a class="menu-link" href="">A&ntilde;o</a> <br /> <br>
+            <a class="menu-link" href="">Carrera</a> <br /> <br>
         </nav>
       </aside>
 
