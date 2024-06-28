@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="/css/general.css">
     <title>StudyCoop - Materias</title>
     <style>
+      body{
+        margin-top: 120px;
+      }
+
       .titulo{
         background-color: rgb(1, 46, 64);
         color: rgb(187, 226, 242);
@@ -16,31 +20,34 @@
         align-items: center;
       }
 
-      .materias{
-        padding-left: 50px;
+      .materias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 5px;
-        text-align: left;
       }
 
       .materias p{
+        font-weight: bold;
         font-size: 30px;
-        padding-left: 30px;
       }
 
       .materias a{
+        color: var(--secondary-color);
         font-size: 25px;
-        padding-left: 60px;
       }
 
       .materias h3{
         background-color: rgb(1, 46, 64);
         color: rgb(187, 226, 242);
-        width: 100px;
+        width: 100%;
         padding: 5px;
         border-radius: 5px;
         cursor: pointer;
+        text-align: center;
+        margin: 10px 0;
       }
 
       .contenido {
