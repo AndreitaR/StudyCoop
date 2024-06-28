@@ -1,141 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>StudyCoop - Subir archivos</title>
-  </head>
-
-  <body bgcolor="#FFF8DC">
-    <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/extranet/muro.html">
-                <h1>StudyCoop</h1>
-              </a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/actividades.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Actividades </a>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href="/extranet/perfilUsuario.html"> Perfil </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </header>
-
-    <nav>
-      <br />
-      <a href="/extranet/guardados.html">Guardados</a> <br />
-      <a href="/extranet/suscripciones.html">Suscripciones</a> <br />
-      <a href="/extranet/materias.html">Materias</a> <br />
-      <a href="/extranet/novedadesUsuarios.html">Novedades</a> <br />
-      <br />
+    <link rel="stylesheet" href="../css/general.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .upload-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .upload-form-card {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .form-file {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 50px; /* Ajusta la altura del campo de subida de archivos */
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #499ffc;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #595f65;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="../imagenes/StudyCoop.png" alt="StudyCoop Logo"/>
+        <a href="/muro.html"><h1>StudyCoop</h1></a>
+    </div>
+    <div class="buscador">
+        <form action="resultadoBuscar.html" method="get">
+            <input type="text" name="buscar" placeholder="Buscar..." required/>
+        </form>
+    </div>
+    <nav class="enlaces">
+        <img src="../imagenes/actividades.png" alt="acti.png" height="30px" width="30px"/>
+        <a href=""> Actividades </a>
+        <img src="../imagenes/notificaciones.png" alt="noti.png" height="30px" width="30px"/>
+        <a href=""> Notificaciones </a>
+        <img src="../imagenes/usuario.png" alt="usuario.png" height="30px" width="30px"/>
+        <a href="perfilUsuario.html"> Perfil </a>
     </nav>
-
-    <center>
-      <table border="1" cellpadding="10">
-        <tr>
-          <td>
-            <form
-              action="subirArchivo"
-              method="post"
-              enctype="multipart/form-data"
-            >
-              <h1>Subir Archivo</h1>
-              <fieldset>
-                <p>Informaci&oacute;n del archivo a subir</p>
-                <label for="titulo">T&iacute;tulo:</label><br />
-                <input
-                  type="text"
-                  id="titulo"
-                  name="titulo"
-                  required
-                /><br /><br />
-                <label for="materia">Materia:</label><br />
-                <select id="materia" name="materia">
-                  <option value="matematicas">Matem&aacute;ticas</option>
-                  <option value="fisica">F&iacute;sica</option>
-                  <option value="historia">Historia</option></select
-                ><br /><br />
-
-                <label for="comentarios">Comentarios:</label><br />
-                <textarea
-                  id="comentarios"
-                  name="comentarios"
-                  rows="4"
-                  cols="50"
-                ></textarea>
-                <br />
-                <br />
-
-                <label for="archivo">Selecciona un archivo:</label><br />
-                <input
-                  type="file"
-                  id="archivo"
-                  name="archivo"
-                  required
-                /><br /><br />
-
-                <button type="submit">Subir Archivo</button>
-                <button type="reset">Cancelar</button>
-              </fieldset>
-            </form>
-          </td>
-        </tr>
-      </table>
-    </center>
-
-    <br />
-
-    <footer>
-      <hr />
-      <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+</header>
+<div class="centro">
+    <aside>
       <nav>
+        <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
+        <br />
+        <a class="menu-link" href="/extranet/suscripciones.html"
+          >Suscripciones</a
+        >
+        <br />
+        <a class="menu-link" href="/extranet/materias.html">Materias</a>
+        <br />
+        <a class="menu-link" href="/extranet/novedadesUsuarios.html"
+          >Novedades</a
+        >
+        <br />
+        <br />
+      </nav>
+    </aside>
+    <main class="subirArchivo">
+        <div class="titulo">
+            <h1>Subir Archivo</h1>
+        </div>
+        <div class="upload-form-container">
+            <div class="upload-form-card">
+                <form action="subirArchivo" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <div>
+                            <label for="titulo" class="form-label">T&iacute;tulo:</label>
+                            <input type="text" id="titulo" name="titulo" class="form-control" required/>
+                        </div>
+                        <div>
+                            <label for="materia" class="form-label">Materia:</label>
+                            <select id="materia" name="materia" class="form-select">
+                                <option value="matematicas">Matem&aacute;ticas</option>
+                                <option value="fisica">F&iacute;sica</option>
+                                <option value="historia">Historia</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="comentarios" class="form-label">Comentarios:</label>
+                            <textarea id="comentarios" name="comentarios" class="form-control" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <label for="archivo" class="form-label">Selecciona un archivo:</label>
+                            <input type="file" id="archivo" name="archivo" class="form-file" required/>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Subir Archivo</button>
+                            <button type="reset" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <nav></nav>
+    </aside>
+</div>
+
+<footer>
+    <img src="../imagenes/StudyCoop.png" alt="logo">
+    <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
+    <nav>
         <ul>
-          <li><a href="/internet/presentacion.html">Acerca de Nosotros</a></li>
-          <li>
-            <a href="">StudyCoop@gmail.com</a>
-          </li>
-          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
+            <li><a href="presentacion.html">Acerca de Nosotros</a></li>
+            <li><a href="">StudyCoop@gmail.com</a></li>
+            <li><a href="">Pol&iacute;tica de Privacidad</a></li>
         </ul>
+    </nav>
+</footer>
+<script src="../js/subirArchivo.js"></script>
+</body>
+</html>
+
       </nav>
     </footer>
   </body>
