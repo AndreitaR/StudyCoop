@@ -1,5 +1,5 @@
-/*Funciones*/ 
-/*Declaración de una función*/
+/* Funciones */
+/* Declaración de una función */
 function contraseniaValida(contrasenia) {
     // Expresión regular para validar que la contraseña tenga al menos:
     // - 1 letra minúscula
@@ -27,13 +27,14 @@ function correoValido(email){
         return false;
     }
 }
+
 function contenidoValido(contenido, cantPermitidaCaracteres) {
     var regularExpContenido = /[!@#$%^&*(),.?":{}|<>]/g; // validar cantidad de caracteres especiales permitidos
     var cantCaracteresEspeciales = (contenido.match(regularExpContenido) || []).length; // sirve para contar los caracteres utilizados en textarea
   
     if (cantCaracteresEspeciales > cantPermitidaCaracteres) {
       return true;
-    }else{
-        return false;
+    } else {
+      return false;
     }
-  }
+}
