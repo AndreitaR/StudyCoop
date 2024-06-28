@@ -3,17 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudyCoop - Iniciar sesión</title>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/formatoRegistrar.css" />
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35" />
+    <script src="/js/Validar.js"></script>
+    <script lang="javascript">
+      $(document).ready(function(){//ejecuta el codigo una cuando el HTML esta cargado
+        // Agrega un evento que se activa cuando el formulario se envia
+        $('#loginForm').on('submit', function (event){
+            event.preventDefault();// Previene el comportamiento predeterminado del formulario, que es recargar la pagina
+           // Obtiene los valores de los campos de entrada con id 'email' y 'password'
+            var email = $('#email').val();
+            var password = $('#password').val();
+
+            if(!email || !password){// Verifica si alguno de los campos esta vacio
+                window.alert('Por favor complete todos los campos.');
+                return;
+            }
+            if(! correoValido(email)){// Prueba si el valor del email coincide con el patrón de la expresión regular
+                window.alert('Por favor ingrese un correo valido, recuerde que no puede empezar con un número.');
+                return;// Detiene la ejecución del código si el correo no es válido
+            }
+            if(! contraseniaValida(password)){
+                window.alert('La contraseña debe contener al menos 7 caracteres conformados así: 1 letra mayúscula, 1 letra minúscula, 2 números, 2 caracteres especiales, y no debe contener espacios.');
+                return;
+            }
+            this.submit();// Si todas las validaciones pasan, envía el formulario
+
+            //verificar si el email y contraseña pertenece al admin
+            if(email==='studyCoop@gmail.com' && password==='Admin12@@'){
+                window.location.href='/intranet/muroAdmin.html';
+            }else{
+                window.location.href='/extranet/muro.html';
+            }
+            });
+          //botón para mostrar/ocultar la contraseña
+          $('#togglePassword').on('click', function(){//Agrega un evento que se activa cuando el botón es clickeado
+            var passwordField = $('#password');
+            var passwordFieldType = passwordField.attr('type');//tipo de entrada del campo de contraseña
+            if(passwordFieldType === 'password'){
+              //Si el tipo es 'password', lo cambia a 'text' para mostrar la contraseña
+              passwordField.attr('type', 'text');
+              $(this).text('Ocultar contraseña');
+            } else {
+              //Si el tipo es 'text', lo cambia a 'password' para ocultar la contraseña
+              passwordField.attr('type', 'password');
+              $(this).text('Mostrar contraseña');
+            }
+          });
+      });
+    </script>
+    <title>StudyCoop - Iniciar sesi&oacute;n</title>
   </head>
 
   <body>
@@ -25,10 +73,9 @@
           <b class="marca">StudyCoop</b>
         </h1>
         <br />
-        <h2 class="bienvenido"><b>Bienvenido al inicio de sesión</b></h2>
+        <h2 class="bienvenido"><b>Bienvenido al inicio de sesi&oacute;n</b></h2>
         <h3>
           <br />
-          <!--id es para que coincida con el id de javaScriptinicio.js-->
           <form
             id="loginForm"
             action="/extranet/muro.html"
@@ -49,7 +96,7 @@
               />
             </div>
             <div class="contenedor-entrada">
-              <label for="password">Contraseña:</label>
+              <label for="password">Contrase&ntilde;a:</label>
               <div class="password-container">
                 <input
                   type="password"
@@ -74,7 +121,7 @@
                 >Registrarse</a
               >
               <a href="" class="btn btn-secondary boton-secundario"
-                >Olvidé mi contraseña</a
+                >Olvid&eacute; mi contrase&ntilde;a</a
               >
             </div>
           </form>
@@ -82,7 +129,7 @@
         <br />
         <nav class="nav-contenedor">
           <a href="/internet/presentacion.html" class="nav-boton izquierda">
-            Atrás
+            Atr&aacute;s
           </a>
           <a href="/internet/buscarSinRegistro.html" class="nav-boton derecha">
             Buscar
@@ -92,7 +139,6 @@
     </div>
     <br />
     <footer>
-      <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
       <nav>
         <ul>
@@ -100,13 +146,11 @@
             <a href="/internet/presentacion.html">Acerca de Nosotros</a>
           </li>
           <li>
-            <a href="">StudyCoop@gmail.com</a>
+            <a href="">studyCoop@gmail.com</a>
           </li>
-          <li><a href="">Política de Privacidad</a></li>
+          <li><a href="">Pol&iacute;tica de Privacidad</a></li>
         </ul>
       </nav>
     </footer>
-    <script src="/js/ValidacionUsuario.js"></script>
-    <!--Referencia externa de java-->
   </body>
 </html>
