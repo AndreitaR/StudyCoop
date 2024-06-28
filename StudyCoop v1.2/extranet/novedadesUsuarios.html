@@ -6,27 +6,29 @@
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/novedades.css">
     <title>StudyCoop - Novedades</title>
+    <style>
+      body{
+        margin-top: 100px;
+      }
+    </style>
   </head>
   <body>
-
     <header>
-      <div class="logo">
-        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-        <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
-      </div>
+      <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
 
-      <div class="buscador">
-        <form action="/extranet/resultadoBuscar.html" method="get">
-          <input
-            type="text"
-            name="buscar"
-            placeholder="Buscar..."
-            required
-          />
-        </form>
-      </div>
+      <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
 
-      <nav class="enlaces">
+      <form action="/extranet/resultadoBuscar.html" method="get">
+        <input
+          type="text"
+          name="buscar"
+          placeholder="Buscar..."
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <nav>
         <img
           src="/imagenes/actividades.png"
           alt="acti.png"
@@ -51,16 +53,18 @@
       </nav>
     </header>
 
+
     <div class="centro">
       <aside>
         <nav>
-          <a href="/extranet/guardados.html"> Guardados</a> 
+          <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
           <br />
-          <a href="/extranet/suscripciones.html"> Suscripciones</a> 
+          <a class="menu-link" href="/extranet/suscripciones.html">Suscripciones</a>
+          <br /> 
+          <a class="menu-link" href="/extranet/materias.html">Materias</a>
           <br />
-          <a href="/extranet/materias.html"> Materias</a> 
+          <a class="menu-link" href="/extranet/novedadesUsuarios.html">Novedades</a>
           <br />
-          <a href="/extranet/novedadesUsuarios.html"> Novedades</a> 
           <br />
         </nav>
       </aside>
@@ -70,11 +74,8 @@
           <h1>Novedades</h1>
         </div>
 
-        <br>
-
         <ol class="lista">
             <h3>P&aacute;gina de Noticias</h3>
-            <br>
             <p>
               Se ha desarrollado la "p&aacute;gina de Noticias" en el sitio
               Web de StodyCoop.
