@@ -3,98 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/prueba.css">
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="32x32">
     <title>StudyCoop - Gesti&oacute;n de usuarios</title>
+    <style>
+      .left-box {
+        position: left;
+        top: 0;
+        left: 0;
+        width: 200px; /* Ajusta el ancho según tus necesidades */
+        padding: 15px;
+        background-color: #fcfcfca7;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .left-box h4 {
+        margin-top: 0;
+    }
+
+    .left-box ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .left-box li {
+        margin-bottom: 10px;
+    }
+
+    .left-box a {
+        text-decoration: none;
+        color: #13145a;
+    }
+    </style>
   </head>
 
-  <body bgcolor="#FFF8DC">
-    <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/tarea.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Tareas </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> ADMINISTRADOR </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </header>
-
-    <nav>
-      <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
-      <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
-    </nav>
-
-    <center>
-      <div>
-        <h2><u>Gestionar Usuario</u></h2>
+  <body>
+      <header>
+        <div class="logo">
+          <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+          <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
+        </div>
+        <br/>
+        <div class="buscador">
+          <form action="/extranet/resultadoBuscar.html" method="get">
+            <input type="text" name="buscar" placeholder="Buscar..." required />
+          </form>
+        </div>
+        <br/>
+        <nav class="enlaces">
+          <img
+            src="/imagenes/actividades.png"
+            alt="acti.png"
+            height="30px"
+            width="30px"
+          />
+          <a href=""> Actividades </a>
+          <img
+            src="/imagenes/notificaciones.png"
+            alt="noti.png"
+            height="30px"
+            width="30px"
+          />
+          <a href=""> Notificaciones </a>
+          <img
+            src="/imagenes/usuario.png"
+            alt="usuario.png"
+            height="30px"
+            width="30px"
+          />
+          <a href=""> ADMINISTRADOR </a>
+        </nav>
+      </header>
+  
+      <div class="centro">
+        <aside>
+          <nav>
+            <a href="/intranet/novedadesAdmin.html">Subir novedades</a> <br />
+            <a href="/intranet/gestionarUsuarios.html">Gestionar Usuario</a> <br />
+          </nav>
+        </aside>
+  
+    <main>
+      <br/>
+      <br/>
+        <h2>Gestionar Usuario</h2>
         <!--Estos son solo ejemplos estaticos, deben ser dinamicos despues-->
-      </div>
-    </center>
+      <br/>
 
-    <div>
-      <table border="1" cellpadding="10">
-        <tr>
-          <td>
-            <div>
-              <h4><b>Ordenar por:</b></h4>
-              <ul>
-                <nav>
-                  <li><a href="">Apellido</a> <br /></li>
-                  <li><a href="">Nombre</a> <br /></li>
-                  <li><a href="">Fecha ingreso</a> <br /></li>
-                  <li>
-                    <a href=""><u>Ascendente / Descendente</u></a> <br />
-                  </li>
-                </nav>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      </table>
+      <div class="left-box">
+        <h4><b>Ordenar por:</b></h4>
+        <nav>
+          <li><a href="">Apellido</a> <br /></li>
+          <li><a href="">Nombre</a> <br /></li>
+          <li><a href="">Fecha ingreso</a> <br /></li>
+          <li><a href=""><u>Ascendente / Descendente</u></a> <br /></li>
+        </nav>
     </div>
 
-    <div>
-      <table align="center" border="1" cellpadding="10">
+    <div class="contenedor-bloqueo">
         <tr>
           <td>
             <nav>
@@ -113,13 +120,17 @@
             </nav>
           </td>
         </tr>
-      </table>
     </div>
-
+  </main>
+  <aside>
+    <nav>
+      <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+    </nav>
+  </aside>
+</div>
     <br />
   
     <footer>
-      <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
       <nav>
         <ul>
@@ -133,3 +144,4 @@
     </footer>
   </body>
 </html>
+
