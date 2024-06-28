@@ -3,44 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/prueba.css">
     <title>StudyCoop - B&uacute;squeda</title>
   </head>
 
   <body>
     <header>
       <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-      <h1>StudyCoop</h1>
+
+      <a href="/extranet/muro.html"><h1>StudyCoop</h1></a>
+
       <form action="/extranet/resultadoBuscar.html" method="get">
         <input
           type="text"
-          name="query"
+          name="buscar"
           placeholder="Buscar..."
           required
         />
+        <button type="submit">Buscar</button>
       </form>
+
       <nav>
+        <img
+          src="/imagenes/actividades.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
         <a href=""> Actividades </a>
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
         <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
         <a href="/extranet/perfilUsuario.html"> Perfil </a>
       </nav>
     </header>
 
     <div class="centro">
 
-    <aside>
-      <nav>
-        <br />
-        <a href="/extranet/guardados.html">Guardados</a>
-        <br />
-        <a href="/extranet/suscripciones.html">Suscripciones</a>
-        <br />
-        <a href="/extranet/materias.html">Materias</a>
-        <br />
-        <a href="/extranet/novedadesUsuarios.html">Novedades</a>
-        <br />
-      </nav>
-    </aside>
+      <aside>
+        <nav>
+          <a class="menu-link" href="/extranet/guardados.html">Guardados</a>
+          <br />
+          <a class="menu-link" href="/extranet/suscripciones.html">Suscripciones</a>
+          <br /> 
+          <a class="menu-link" href="/extranet/materias.html">Materias</a>
+          <br />
+          <a class="menu-link" href="/extranet/novedadesUsuarios.html">Novedades</a>
+          <br />
+          <br />
+        </nav>
+      </aside>
 
     <main>
       
