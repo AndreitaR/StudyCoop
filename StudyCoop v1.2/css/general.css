@@ -60,8 +60,7 @@ header {
     padding: 10px 15%;
     background-color: var(--primary-color);
     color: white;
-    position: fixed;
-    top: 0%;
+
 }
 .logo {
   display: flex;
