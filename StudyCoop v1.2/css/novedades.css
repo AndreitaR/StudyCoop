@@ -1,7 +1,7 @@
 .novedades{
     border-radius: 10px; /*borde redondeado*/
-    margin: 50px; /**/
-    background-color: rgb(164, 232, 181);
+    margin: 50px;
+    background-color: rgb(187, 226, 242);
 }
 
 .titulo{
@@ -12,24 +12,19 @@
 .lista{
     background-color: white; /*color del fondo*/
     border-radius: 10px; /*borde redondeado*/
-    height: 450px; /*alto*/
     padding: 15px; /*rellena todos los bordes*/
+    height: 300px;
 }
 
 .novedades-anteriores{
     background-color: white; /*color del fondo*/
     border-radius: 10px; /*borde redondeado*/
     width: 300px; /*anchura*/
-    height: 50px; /*altura*/
     padding: 15px; /*rellena todos los bordes*/
 }
 
 .lista p{
   font-size: 25px;
-}
-
-.fecha{
-  font-size: 20px;
 }
 
 .fecha{
