@@ -3,123 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/formatoMuro.css" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="icon" href="/imagenes/StudyCoop.png" sizes="35x35" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--JavaScript-->
+    <script src="/js/validacionBusqueda.js"></script>
+    <script src="/js/Validar.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#form-bloqueo").submit(function (event) {
+          event.preventDefault();
+          //validar correos
+          var emailUser = $("input[name='para']").val();
+
+          if (!correoValido(emailUser)) {
+            alert("Por favor ingrese un correo valido.");
+            return;
+          }
+          //validar comentario
+          const contentTextarea = $("#contenido").val().trim();
+          if (contentTextarea === "") {
+            alert(
+              "Por favor, ingrese una explicación del por que será bloqueado el usuario."
+            );
+            return;
+          }
+          var cantPermitidaCaracteres = 30;
+          if (contenidoValido(contentTextarea, cantPermitidaCaracteres)) {
+            alert(
+              "El limite de caracteres especiales es 30, lo acabas de superar."
+            );
+          } else {
+            alert("El bloqueo se realizo exitosamente.");
+          }
+          $("#contenido").val("");
+        });
+      });
+    </script>
     <title>StudyCoop - Bloqueo de publicaci&oacute;n</title>
   </head>
-  <body bgcolor="#FFF8DC">
+  <body>
     <header>
-      <center>
-        <table>
-          <tr>
-            <td>
-              <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
-            </td>
-            <td>
-              <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
-            </td>
-            <td>
-              <form action="/extranet/resultadoBuscar.html" method="get">
-                <input
-                  type="text"
-                  name="buscar"
-                  placeholder="Buscar..."
-                  required
-                />
-                <button type="submit">Buscar</button>
-              </form>
-            </td>
-
-            <td colspan="2">
-              <nav>
-                <img
-                  src="/imagenes/notificaciones.png"
-                  alt="acti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Notificaciones </a>
-                <img
-                  src="/imagenes/tarea.png"
-                  alt="noti.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> Tareas </a>
-                <img
-                  src="/imagenes/usuario.png"
-                  alt="usuario.png"
-                  height="30px"
-                  width="30px"
-                />
-                <a href=""> ADMINISTRADOR </a>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </header>
-
-    <nav>
-      <a href="/intranet/novedadesAdmin.html"> Subir novedades </a> <br />
-      <a href="/intranet/gestionarUsuarios.html"> Gestionar usuario </a> <br />
-    </nav>
-
-    <div>
-      <center>
-        <form action="bloquearPublicacion">
-          <table align="1" cellpadding="10">
-            <tr>
-              <td align="left">
-                <p>Bloqueo de publicaci&oacute;n</p>
-                <table>
-                  <tr>
-                    <td><p>De:</p></td>
-                    <td><input type="email" name="de" required /></td>
-                  </tr>
-                  <tr>
-                    <td><p>Para:</p></td>
-                    <td><input type="email" name="para" required /></td>
-                  </tr>
-                  <tr>
-                    <td><p>Prueba:</p></td>
-                  </tr>
-                </table>
-                <table border="1" cellpadding="10">
-                  <tr>
-                    <td colspan="2" align="left">
-                      <p>Francesco Paz</p>
-                    </td>
-                    <td align="right">
-                      <p>01/09/24</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" align="center">
-                      <p>xd</p>
-                      <p>Que onda son todos unos #$%&</p>
-                    </td>
-                  </tr>
-                </table>
-                <center>
-                  <nav>
-                    <a href=""> reaccionar </a>
-                    <a href=""> comentar </a>
-                    <a href=""> compartir </a>
-                    <a href=""> descargar </a>
-                    <a href=""> guardar </a>
-                  </nav>
-                  <br />
-                </center>
-                <br />
-                <textarea rows="10" cols="40" id="comentario" name="comentario" placeholder="Informaci&oacute;n sobre el bloqueo de la publicacion: "></textarea>
-                <button type="submit">Enviar</button>
-                <br />
-              </td>
-            </tr>
-          </table>
+      <div class="logo">
+        <img src="/imagenes/StudyCoop.png" alt="StudyCoop Logo" />
+        <a href="/intranet/muroAdmin.html"><h1>StudyCoop</h1></a>
+      </div>
+      <div class="buscador">
+        <form
+          id="buscador"
+          action="/extranet/resultadoBuscar.html"
+          method="get"
+        >
+          <input type="text" name="buscar" placeholder="Buscar..." required />
+          <button type="submit" class="boton-buscar">Buscar</button>
         </form>
-      </center>
+      </div>
+      <nav class="enlaces">
+        <img
+          src="/imagenes/notificaciones.png"
+          alt="acti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Notificaciones </a>
+        <img
+          src="/imagenes/tarea.png"
+          alt="noti.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> Tareas </a>
+        <img
+          src="/imagenes/usuario.png"
+          alt="usuario.png"
+          height="30px"
+          width="30px"
+        />
+        <a href=""> ADMINISTRADOR </a>
+      </nav>
+    </header>
+    <div class="centro">
+      <aside>
+        <nav>
+          <br />
+          <a class="menu-link" href="/intranet/novedadesAdmin.html">
+            Actualizar novedades</a
+          ><br />
+          <a class="menu-link" href="/intranet/gestionarUsuarios.html"
+            >Gesti&oacute;n usuarios</a
+          >
+          <br />
+        </nav>
+      </aside>
+      <br />
+      <main>
+        <div class="informacion">
+          <h1>Bloqueo de publicaci&oacute;n</h1>
+        </div>
+        <br />
+        <center>
+          <div class="contenedor-bloqueo">
+            <form id="form-bloqueo" action="bloquearPublicacion">
+              <div class="contenedor-entrada">
+                <label for="email"><p>De:</p></label>
+                <input
+                  id="email-admin"
+                  type="email"
+                  name="de"
+                  value="StudyCoop@gmail.com"
+                  readonly
+                /><!--readonly hace que sea solo lectura-->
+              </div>
+              <div>
+                <label for="email"><p>Para:</p></label>
+                <input id="email-usuario" type="email" name="para" required />
+              </div>
+              <b>Prueba:</b>
+              <section class="publicacion">
+                <div>
+                  <header>
+                    <img
+                      src="/imagenes/usuario.png"
+                      alt="usuario.png"
+                      height="30px"
+                      width="30px"
+                    />
+                    <div class="user-info">
+                      <p>Francesco Paz</p>
+                    </div>
+                    <div class="fecha">
+                      <p>01/09/24</p>
+                    </div>
+                  </header>
+                  <div class="contenido">
+                    <p>xd</p>
+                  </div>
+                  <div class="detalle">
+                    <p>Que onda son todos unos #$%&</p>
+                  </div>
+                  <nav>
+                    <a href=""
+                      ><img
+                        src="/imagenes/reaccion.png"
+                        alt="acti.png"
+                        height="30px"
+                        width="30px"
+                      />Reaccionar
+                    </a>
+                    <a href=""
+                      ><img
+                        src="/imagenes/comentar.png"
+                        alt="acti.png"
+                        height="30px"
+                        width="30px"
+                      />
+                      Comentar
+                    </a>
+                    <a href=""
+                      ><img
+                        src="/imagenes/compartir.png"
+                        alt="acti.png"
+                        height="30px"
+                        width="30px"
+                      />
+                      Compartir
+                    </a>
+                    <a href=""
+                      ><img
+                        src="/imagenes/descargar.png"
+                        alt="acti.png"
+                        height="30px"
+                        width="30px"
+                      />
+                      Descargar
+                    </a>
+                    <a href=""
+                      ><img
+                        src="/imagenes/guardar.png"
+                        alt="acti.png"
+                        height="30px"
+                        width="30px"
+                      />
+                      Guardar
+                    </a>
+                  </nav>
+                </div>
+                <br />
+                <div>
+                  <textarea
+                    rows="10"
+                    cols="40"
+                    id="contenido"
+                    name="comentario"
+                    placeholder="Informaci&oacute;n sobre el bloqueo de la publicacion: "
+                    minlength="50"
+                    maxlength="500"
+                  ></textarea>
+                  <button type="submit" class="boton-publicar">Enviar</button>
+                </div>
+              </section>
+            </form>
+          </div>
+        </center>
+      </main>
+      <aside>
+        <nav>
+          <!--ACA SE VA A DESARROLLAR DESPUES LA BARRA LATERAL DE LA DERECHA-->
+        </nav>
+      </aside>
     </div>
-
     <footer>
       <hr />
       <p>&copy; 2024 StudyCoop. Todos los derechos reservados.</p>
